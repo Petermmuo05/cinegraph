@@ -1,4 +1,4 @@
-# 🎬 CineGraph — Graph-Powered Cinema Intelligence & Recommendation Engine
+#  CineGraph — Graph-Powered Cinema Intelligence & Recommendation Engine
 
 > **Live Demo**: [https://cinegraph-livid.vercel.app](https://cinegraph-livid.vercel.app)  
 > **Backed by**: [CognoDB Cloud](https://console.cognodb.com) (openCypher / Bolt 5.4)  
@@ -6,7 +6,7 @@
 
 ---
 
-## 🍿 The Story Behind CineGraph
+##  The Story Behind CineGraph
 
 A while ago, I built and launched my hosted hobby project: [FilmPad](https://filmpad.click). I made it to feed my own movie addiction and help me organize movie recommendations I kept saving from TikTok videos into a clean watchlist. To my surprise, a few thousand people discovered it and started using it with me! 
 
@@ -18,13 +18,9 @@ Instead of treating movies like rows in a flat spreadsheet, CineGraph models cin
 
 ---
 
-## 🧠 Why a Graph Database? (Relational vs. Graph)
+##  Why a Graph Database? (Relational vs. Graph)
 
 The standard question for any data architecture is: *Why not just use Postgres or MySQL with foreign keys and JOIN tables?*
-
-In a traditional relational database (RDBMS), data is stored in isolated tables (`movies`, `persons`, `roles`, `genres`, `tropes`). Asking relational questions requires chaining multiple heavy `JOIN` operations. As query depth increases, SQL performance degrades exponentially due to combinatorial explosion, table scans, and massive temporary index tables.
-
-In a graph database like **CognoDB**, relationships are first-class citizens stored natively via pointer adjacency (*index-free adjacency*). Traversing connections takes $O(1)$ constant time per step, regardless of the total database size.
 
 Here are three real-world problems in CineGraph where a graph database decisively outclasses relational SQL:
 
@@ -73,7 +69,7 @@ Here are three real-world problems in CineGraph where a graph database decisivel
 
 ---
 
-## 📊 Graph Data Model
+##  Graph Data Model
 
 The CineGraph schema models rich cinematic entities and their typed, directional relationships:
 
@@ -110,7 +106,7 @@ erDiagram
 
 ---
 
-## ✨ Key Features & User Experience
+##  Key Features & User Experience
 
 1. **Personalized Discover Feed (`/`)**:
    - Dynamic spotlight carousel highlighting top graph-matched titles.
@@ -149,7 +145,7 @@ erDiagram
 
 ---
 
-## 🛠️ Tech Stack & Engineering Architecture
+##  Tech Stack & Engineering Architecture
 
 * **Frontend**: Next.js 15 (App Router with Server & Client Components), React 19, TypeScript
 * **Styling**: Vanilla Tailwind CSS, custom glassmorphism design system, Lucide icons
@@ -162,7 +158,7 @@ erDiagram
 
 ---
 
-## 🚀 Quick Start & Local Setup
+##  Quick Start & Local Setup
 
 ### 1. Provision a CognoDB Cloud Instance
 1. Go to [https://console.cognodb.com/signup](https://console.cognodb.com/signup) and create a free account (no credit card required).
@@ -204,7 +200,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🧪 Benchmark Cypher Queries
+##  Benchmark Cypher Queries
 
 All queries in CineGraph are strictly parameterized using `neo4j-driver` (zero string concatenation, zero Cypher injection vulnerability). Here are key queries used across the app:
 
@@ -234,7 +230,7 @@ LIMIT 10
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 movie-network/
@@ -281,7 +277,7 @@ movie-network/
 
 ---
 
-## 🛡️ Security & Engineering Standards
+##  Security & Engineering Standards
 
 * **Strict Query Parameterization**: Every openCypher query passes parameters via the official Neo4j driver map — no string template interpolation.
 * **Driver Session Management**: Proper session lifecycle handling (`session.close()` in `try...finally` blocks) preventing connection leaks.
