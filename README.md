@@ -1,40 +1,47 @@
-# 🎬 CineGraph — Intelligent Cinematic Knowledge Graph & Recommendation Engine
+# 🎬 CineGraph — Graph-Powered Cinema Intelligence & Recommendation Engine
 
-> **A Wexa AI Take-Home Submission**  
-> Built with **CognoDB** (openCypher / Bolt 5.4), **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
-
----
-
-## 👋 Hey there! Welcome to CineGraph
-
-When I sat down to think about what to build for this assignment, I wanted to pick a domain where a graph database isn't just a gimmick, but where it genuinely shines and makes you wonder how anyone ever managed this in SQL.
-
-Cinema is inherently a web of creative relationships. Films don't live in isolated spreadsheets; they live at the intersection of directors who have recurring creative partnerships with certain actors, composers who craft recurring sonic identities for specific auteurs, narrative tropes that cross genres, and audiences whose taste profiles bridge unexpected franchises.
-
-**CineGraph** is a full-stack, responsive web application that turns that web into an interactive, visual playground. You can trace degrees of separation between any two creatives in real time, explore multi-hop explainable recommendations ("*Why am I seeing this movie?*"), and watch creative ensembles emerge naturally as cliques in the graph.
+> **Live Demo**: [https://cinegraph-livid.vercel.app](https://cinegraph-livid.vercel.app)  
+> **Backed by**: [CognoDB Cloud](https://console.cognodb.com) (openCypher / Bolt 5.4)  
+> **Stack**: Next.js 15 (App Router), TypeScript, Tailwind CSS, Framer Motion, official `neo4j-driver`
 
 ---
 
-## 🧠 Why a Graph Database? (The Relational Comparison)
+## 🍿 The Story Behind CineGraph
 
-The core question every engineering evaluation asks is: *Why not just use Postgres or MySQL with a few JOIN tables?*
+A while ago, I built and launched my very first hosted hobby project: [FilmPad](https://filmpad.click). I made it to feed my own movie addiction and help me organize movie recommendations I kept saving from TikTok videos into a clean watchlist. To my surprise, a few thousand people discovered it and started using it with me! 
 
-Here is why a graph database like **CognoDB** genuinely earns its place here:
+But as much as I loved FilmPad, it had one glaring limitation: **it wasn't actually an intelligent recommendation engine**. It was essentially a glorified movie notepad. It relied on static lists from TMDB and simple AI prompts to extract movie titles from TikTok captions. It had no concept of *how* movies connect, why you love a specific filmmaker's style, or how an actor's collaborations with visionary directors create distinct artistic eras.
 
-### 1. Six Degrees of Separation (Shortest-Path Traversal)
-- **The Problem**: Finding the shortest collaborative chain between two actors (e.g., Timothée Chalamet $\rightarrow$ Cillian Murphy) across arbitrary depths (1 to 8 hops).
-- **In SQL (RDBMS)**: Requires expensive recursive Common Table Expressions (CTEs) or iterative application-level breadth-first search. Each recursive join step causes combinatorial explosion across millions of table rows, requiring heavy temporary tables and complex cycle detection.
-- **In openCypher / CognoDB**: Executed natively via pointer hopping with zero join penalties in $O(V + E)$ time:
+I built **CineGraph** to solve that exact problem.
+
+Instead of treating movies like rows in a flat spreadsheet, CineGraph models cinema as what it actually is: **a living, interconnected knowledge graph**. By leveraging **CognoDB** and openCypher, CineGraph maps the rich web of directors, actors, cinematographers, narrative tropes, and taste profiles. It allows you to uncover *why* you love what you watch, trace degrees of separation between any two cinema icons, explore collaborative director-actor cliques, and discover handpicked recommendations with clear, explainable connection paths.
+
+---
+
+## 🧠 Why a Graph Database? (Relational vs. Graph)
+
+The standard question for any data architecture is: *Why not just use Postgres or MySQL with foreign keys and JOIN tables?*
+
+In a traditional relational database (RDBMS), data is stored in isolated tables (`movies`, `persons`, `roles`, `genres`, `tropes`). Asking relational questions requires chaining multiple heavy `JOIN` operations. As query depth increases, SQL performance degrades exponentially due to combinatorial explosion, table scans, and massive temporary index tables.
+
+In a graph database like **CognoDB**, relationships are first-class citizens stored natively via pointer adjacency (*index-free adjacency*). Traversing connections takes $O(1)$ constant time per step, regardless of the total database size.
+
+Here are three real-world problems in CineGraph where a graph database decisively outclasses relational SQL:
+
+### 1. Six Degrees of Separation (`shortestPath`)
+* **The Goal**: Find the exact collaborative chain connecting any two people in cinema (e.g., Timothée Chalamet $\rightarrow$ Cillian Murphy) across arbitrary depths (1 to 8 hops).
+* **In SQL**: Requires complex recursive Common Table Expressions (CTEs) or iterative application-level breadth-first search. Each recursive join step blows up memory and requires expensive cycle-detection logic.
+* **In CognoDB (openCypher)**: Solved natively in milliseconds using built-in graph algorithms:
   ```cypher
   MATCH (start:Person {name: $personA}), (target:Person {name: $personB})
   MATCH p = shortestPath((start)-[:ACTED_IN|DIRECTED*..8]-(target))
   RETURN p, length(p) AS degreesOfSeparation
   ```
 
-### 2. Explainable Multi-Hop Recommendations (Collaborative & Thematic Traversal)
-- **The Problem**: Recommending a movie not just because "it's Sci-Fi", but by traversing 3–5 hops: *User liked Movie A $\rightarrow$ shares Director X with Movie B $\rightarrow$ shares Actor Y with Movie C $\rightarrow$ shares Narrative Trope Z with Movie D*.
-- **In SQL (RDBMS)**: You would need to write a monster query joining `users`, `ratings`, `movies`, `movie_directors`, `directors`, `movie_actors`, `actors`, `movie_tropes`, `tropes`, and `movie_genres`, aggregate intermediate scores, group by multiple IDs, and filter out already-watched titles. It is brittle, slow to execute, and hard to maintain.
-- **In openCypher / CognoDB**: Adjacency is index-free. Traversal reads like natural English:
+### 2. Multi-Hop Explainable Recommendations (3+ Hops)
+* **The Goal**: Recommend films based on multi-dimensional connectivity: *User liked Movie A $\rightarrow$ shares Director X with Movie B $\rightarrow$ shares Lead Actor Y with Movie C $\rightarrow$ shares Narrative Trope Z with Movie D*, while filtering out already-watched titles and scoring path affinity.
+* **In SQL**: Would require a monster query joining 10+ tables (`users`, `ratings`, `movies`, `movie_directors`, `directors`, `movie_actors`, `actors`, `movie_tropes`, `tropes`, `movie_genres`), with nested subqueries and expensive group-by aggregations.
+* **In CognoDB (openCypher)**: Clean, declarative, and intuitive traversal:
   ```cypher
   MATCH (u:User {id: $userId})-[r:RATED]->(m:Movie)
   WHERE r.rating >= 8.0
@@ -52,15 +59,15 @@ Here is why a graph database like **CognoDB** genuinely earns its place here:
   ORDER BY affinityScore DESC LIMIT 8
   ```
 
-### 3. Clique & Creative Partnership Discovery
-- **The Problem**: Identifying tight-knit creative pairs (e.g. Christopher Nolan + Hans Zimmer, or Martin Scorsese + Leonardo DiCaprio) who repeatedly produce critically acclaimed cinema together.
-- **In openCypher / CognoDB**:
+### 3. Creative Cliques & Collaborator Clusters
+* **The Goal**: director-actor pairs who have made 2+ acclaimed films together and maintain high average ratings.
+* **In CognoDB (openCypher)**:
   ```cypher
   MATCH (d:Person)-[:DIRECTED]->(m:Movie)<-[:ACTED_IN]-(a:Person)
   WHERE d.id <> a.id
-  WITH d, a, count(m) AS collaborations, avg(m.imdbRating) AS avgRating
+  WITH d, a, count(m) AS collaborations, avg(m.imdbRating) AS avgRating, collect(m.title) AS movies
   WHERE collaborations >= 2
-  RETURN d.name AS director, a.name AS actor, collaborations, avgRating
+  RETURN d.name AS director, a.name AS actor, collaborations, avgRating, movies
   ORDER BY collaborations DESC, avgRating DESC
   ```
 
@@ -68,92 +75,128 @@ Here is why a graph database like **CognoDB** genuinely earns its place here:
 
 ## 📊 Graph Data Model
 
-The schema models rich cinematic entities and their typed relationships:
+The CineGraph schema models rich cinematic entities and their typed, directional relationships:
 
 ```mermaid
 erDiagram
     PERSON ||--o{ MOVIE : ACTED_IN
     PERSON ||--o{ MOVIE : DIRECTED
-    PERSON ||--o{ MOVIE : WROTE
     PERSON ||--o{ MOVIE : COMPOSED_BY
     MOVIE ||--|{ GENRE : IN_GENRE
-    MOVIE ||--o{ FRANCHISE : PART_OF
     MOVIE ||--o{ TROPE : HAS_TROPE
     MOVIE ||--o{ STUDIO : PRODUCED_BY
+    MOVIE ||--o{ FRANCHISE : PART_OF
     USER ||--o{ MOVIE : RATED
 ```
 
-### Node Labels & Properties
-- **`:Movie`**: `id`, `title`, `releaseYear`, `runtime`, `imdbRating`, `posterUrl`, `backdropUrl`, `budget`, `boxOffice`, `plotSummary`, `tagline`
-- **`:Person`**: `id`, `name`, `bornYear`, `photoUrl`, `bio`, `primaryRole` (Actor, Director, Composer)
-- **`:Genre`**: `id`, `name`, `colorHex`, `icon`
-- **`:Trope`**: `id`, `name`, `category`, `description` (e.g., *Non-Linear Timeline*, *Time Dilation*, *Cyberpunk Dystopia*, *Existential Dread*)
-- **`:Studio`**: `id`, `name`, `foundedYear`, `logoUrl`
-- **`:Franchise`**: `id`, `name`, `universe`, `totalGross`
-- **`:User`**: `id`, `username`, `avatarUrl`, `bio`, `favoriteGenre`
+### Node Labels & Schema Properties
+* **`:Movie`**: `id`, `title`, `releaseYear`, `runtime`, `imdbRating`, `posterUrl`, `backdropUrl`, `budget`, `boxOffice`, `plotSummary`, `tagline`
+* **`:Person`**: `id`, `name`, `bornYear`, `photoUrl`, `bio`, `primaryRole` (*Actor, Director, Composer*)
+* **`:Genre`**: `id`, `name`, `colorHex`, `icon`
+* **`:Trope`**: `id`, `name`, `category`, `description` (*e.g., Non-Linear Timeline, Time Dilation, Cyberpunk Dystopia, Antihero*)
+* **`:Studio`**: `id`, `name`, `foundedYear`, `logoUrl`
+* **`:Franchise`**: `id`, `name`, `universe`, `totalGross`
+* **`:User`**: `id`, `username`, `passwordHash`, `avatarUrl`, `bio`, `favoriteGenre`
 
-### Relationship Types & Properties
-- **`[:ACTED_IN]`**: `characterName`, `billingOrder`
-- **`[:DIRECTED]`**: `creditedAs`
-- **`[:COMPOSED_BY]`**: Soundtrack & score credits
-- **`[:IN_GENRE]`**: Genre classification
-- **`[:HAS_TROPE]`**: Narrative device tags
-- **`[:PART_OF]`**: `chronologicalOrder`
-- **`[:PRODUCED_BY]`**: Production studio affiliation
-- **`[:RATED]`**: `rating` (1.0-10.0), `review`
+### Relationship Types & Metadata
+* **`[:ACTED_IN]`**: `characterName`, `billingOrder`
+* **`[:DIRECTED]`**: `creditedAs`
+* **`[:COMPOSED_BY]`**: Soundtrack and original score credits
+* **`[:IN_GENRE]`**: Categorical genre link
+* **`[:HAS_TROPE]`**: Thematic and narrative device tags
+* **`[:PRODUCED_BY]`**: Production studio affiliation
+* **`[:PART_OF]`**: Franchise continuity
+* **`[:RATED]`**: `rating` (1.0–10.0), `review`, `timestamp`
 
 ---
 
-## 🎨 UI/UX & Design Philosophy
+## ✨ Key Features & User Experience
 
-Inspired by modern luxury streaming applications, Apple Human Interface Guidelines, and Dieter Rams' *"Less, but better"* philosophy:
+1. **Personalized Discover Feed (`/`)**:
+   - Dynamic spotlight carousel highlighting top graph-matched titles.
+   - Curated shelves for trending movies, indie & visually stunning gems, psychological thrillers, sci-fi adventures, and top-rated masterpieces.
+   - Interactive movie search and fast modal previews.
 
-1. **Deep Emerald & Obsidian Theme**:
-   - Palette: Deep Forest Obsidian (`#040D0A`), Emerald Core (`#10B981`), Liquid Mint (`#34D399`), and IMDb Gold (`#F59E0B`).
-2. **Liquid Glass & Curved Cards (`rounded-[32px]`)**:
-   - Multi-layered frosted glass with `backdrop-filter: blur(24px)`, specular top-edge white highlights, and subtle emerald rim lighting.
-3. **Floating Liquid Frosted Dock**:
-   - Centered bottom-floating pill navigation bar with Framer Motion spring layout animations.
-4. **Adaptive Multi-Breakpoint Responsiveness**:
-   - **Mobile (<640px)**: Full-bleed phone-optimized hero card, horizontal swipeable category chips, bottom-sheet slide-up drawers for graph node inspection.
-   - **Tablet (640px–1024px)**: 2-column bento grids with auto-scaled canvas physics.
-   - **Desktop (1024px+)**: Side-by-side interactive canvas + sticky node inspector with live Cypher execution feedback.
-5. **Interactive HTML5 Canvas Force-Directed Engine**:
-   - Smooth 60fps physics simulation with d3-force, glowing node halos, particle link pulses, drag/zoom/pan, and double-click real-time neighborhood blooming.
+2. **Interactive 2D Force-Directed Graph Explorer (`/graph`)**:
+   - 60fps HTML5 Canvas physics engine powered by `d3-force`.
+   - Visual color coding by entity type (Movies in Emerald, Persons in Cyan, Genres in Purple, Tropes in Amber).
+   - Double-click any node to trigger real-time multi-hop Cypher expansion queries against CognoDB.
+   - Drag, zoom, filter, and inspect detailed metadata in a slide-out drawer.
+
+3. **Explainable Recommendations Hub (`/recommendations`)**:
+   - See *why* every film is recommended with human-readable connection paths (*"Recommended for Sci-Fi fans • Themes: Time Dilation • Directed by Christopher Nolan"*).
+   - Toggle between sample taste profiles or seed custom movie tastes.
+   - Inspect the live technical openCypher query powering the recommendations.
+
+4. **Degrees of Separation / Path Finder (`/path-finder`)**:
+   - Visual Six-Degrees connection engine between any two actors or directors.
+   - Displays every intermediate movie and collaborative link along the shortest path.
+
+5. **Iconic Collaborations & Ensembles**:
+   - Identifies frequent director-actor creative partnerships, joint filmographies, and average IMDb collaboration scores.
+
+6. **Live openCypher Query Console**:
+   - Built specifically for technical evaluators to test custom openCypher queries directly on CognoDB.
+   - Pre-loaded benchmark queries with roundtrip latency metrics in milliseconds and raw JSON inspection.
+
+7. **Movie Library & Taste Breakdown (`/watchlist`)**:
+   - Personal watchlist and liked titles management.
+   - Real-time taste breakdown showing dominant genre affinities, favorite directors, and key narrative themes.
+
+8. **Secure Authentication & Guarded Access (`/login`)**:
+   - WebCrypto session signing with Edge middleware protection.
+   - Clean guest session isolation and instant sign-out.
+
+---
+
+## 🛠️ Tech Stack & Engineering Architecture
+
+* **Frontend**: Next.js 15 (App Router with Server & Client Components), React 19, TypeScript
+* **Styling**: Vanilla Tailwind CSS, custom glassmorphism design system, Lucide icons
+* **Animations**: Framer Motion spring physics & smooth transitions
+* **Graph Visualization**: HTML5 Canvas with `d3-force` simulation
+* **Database**: **CognoDB Cloud** (Bolt protocol 5.4, openCypher query language)
+* **Driver**: Official `neo4j-driver` for JavaScript/TypeScript with full parameterization
+* **Authentication**: Edge middleware token verification with native WebCrypto API
+* **Fault Tolerance**: Automatic connection pooling, graceful query error handling, and high-fidelity fallback to ensure uninterrupted browsing if the database sleeps.
 
 ---
 
 ## 🚀 Quick Start & Local Setup
 
-### 1. Clone & Install
+### 1. Provision a CognoDB Cloud Instance
+1. Go to [https://console.cognodb.com/signup](https://console.cognodb.com/signup) and create a free account (no credit card required).
+2. Create a free (`c0`) instance and select your preferred region. 
+3. Copy your connection URI (`bolt+s://<instance-id>.databases.cognodb.cloud`) and generated password for user `cognodb`.
+
+### 2. Clone Repository & Install Dependencies
 ```bash
-git clone https://github.com/your-username/movie-network.git
-cd movie-network
+git clone https://github.com/Petermmuo05/cinegraph.git
+cd cinegraph
 npm install
 ```
 
-### 2. Configure Environment Variables
-Create a `.env.local` file in the project root:
+### 3. Configure Environment Variables
+Create a `.env.local` file in the root directory:
 ```env
-COGNODB_URI=bolt+s://your-instance.databases.cognodb.cloud
+COGNODB_URI=bolt+s://<your-instance>.databases.cognodb.cloud
 COGNODB_USER=cognodb
-COGNODB_PASSWORD=your-secure-password
+COGNODB_PASSWORD=<your-secure-password>
 ```
-*(Note: If no credentials are provided, CineGraph automatically activates its high-fidelity in-memory demo fallback mode, ensuring 100% of features remain testable!)*
 
-### 3. Test Database Connectivity
-Run the diagnostic script to verify your Bolt handshake and latency:
+### 4. Test Connectivity & Latency
+Run the diagnostic connection script:
 ```bash
-npm run test:conn
+npx tsx scripts/test-connection.ts
 ```
 
-### 4. Seed the Graph Database
-Populate your CognoDB instance with curated blockbuster and award-winning cinematic nodes:
+### 5. Seed the Graph Database
+Populate your CognoDB instance with curated movies, directors, actors, genres, tropes, and relationships:
 ```bash
-npm run seed
+npx tsx scripts/seed.ts
 ```
 
-### 5. Start the Development Server
+### 6. Run Development Server
 ```bash
 npm run dev
 ```
@@ -161,60 +204,94 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🧪 Evaluator's Live Cypher Workbench
+## 🧪 Benchmark Cypher Queries
 
-To make grading and reviewing seamless, CineGraph includes a dedicated **Live Cypher Query Workbench** accessible at `/inspector`.
+All queries in CineGraph are strictly parameterized using `neo4j-driver` (zero string concatenation, zero Cypher injection vulnerability). Here are key queries used across the app:
 
-You can:
-- Execute preset benchmark queries (Shortest Path, 3-Hop Recommendations, Degree Centrality, Collaborator Cliques).
-- Write and run custom read-only openCypher queries directly against CognoDB.
-- View exact roundtrip execution times in milliseconds.
-- Inspect formatted raw JSON output records.
+#### 1. Dynamic Neighborhood Expansion (Graph Explorer)
+```cypher
+MATCH (n {id: $nodeId})-[r]-(neighbor)
+RETURN n, r, neighbor
+LIMIT 50
+```
+
+#### 2. Six Degrees Shortest Path (Path Finder)
+```cypher
+MATCH (start:Person {name: $fromPerson}), (target:Person {name: $toPerson})
+MATCH p = shortestPath((start)-[:ACTED_IN|DIRECTED*..8]-(target))
+RETURN p, length(p) AS degrees
+```
+
+#### 3. Highest Centrality Nodes in Universe
+```cypher
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
+WITH n, labels(n)[0] AS label, count(r) AS degree
+RETURN coalesce(n.title, n.name) AS name, label, degree
+ORDER BY degree DESC
+LIMIT 10
+```
 
 ---
 
-## 📁 Repository Structure
+## 📁 Project Structure
 
 ```
 movie-network/
 ├── scripts/
-│   ├── seed-data.json         # Curated cinematic knowledge graph dataset
+│   ├── seed-data.json         # Curated cinematic graph dataset
 │   ├── seed.ts                # Idempotent CognoDB seeding script with UNWIND batching
 │   └── test-connection.ts     # Diagnostic Bolt connectivity tester
 │
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx         # Root layout with fonts & floating dock
-│   │   ├── page.tsx           # Discover Showcase (Hero curved card, recs & teaser)
-│   │   ├── graph/             # Interactive 2D Force-Directed Canvas Explorer
-│   │   ├── recommendations/   # Multi-Hop Explainable Recommendations Hub
-│   │   ├── path-finder/       # Six Degrees of Cinema Shortest Path Tool
-│   │   ├── ensembles/         # Creative Cliques & Collaborator Clusters
-│   │   ├── inspector/         # Live openCypher Query Workbench for Evaluators
-│   │   ├── movie/[id]/        # Deep-dive movie details & cast wheel
+│   │   ├── layout.tsx         # Root layout with fonts & metadata
+│   │   ├── LayoutClientWrapper.tsx # Client wrapper with AuthGuard & UserProvider
+│   │   ├── page.tsx           # Discover dashboard with shelves & spotlight
+│   │   ├── graph/             # 2D Interactive Force-Directed Canvas
+│   │   ├── recommendations/   # Explainable Multi-Hop Recommendations Hub
+│   │   ├── path-finder/       # Degrees of Separation Connection Finder
+│   │   ├── ensembles/         # Director & Actor Collaborations
+│   │   ├── inspector/         # Live openCypher Query Console for Evaluators
+│   │   ├── watchlist/         # User Movie Library & Taste Breakdown
+│   │   ├── movie/[id]/        # Movie detail page & connected cast
 │   │   ├── person/[id]/       # Creative profile & filmography graph
+│   │   ├── login/             # Authentication page
 │   │   └── api/               # Parameterized Next.js Route Handlers
 │   │
 │   ├── components/
-│   │   ├── common/            # Header, FloatingDock, StatusBadge, SearchModal
+│   │   ├── common/            # Header, FloatingDock, AuthGuard, SearchModal
 │   │   ├── graph/             # ForceGraphView, GraphControls, NodeDetailsDrawer
 │   │   ├── recommendations/   # RecCard, PersonaSelector
-│   │   └── path-finder/       # PathVisualizer
+│   │   ├── home/              # SpotlightCarousel, MovieShelf, TasteTunerModal
+│   │   └── onboarding/        # TasteOnboardingWizard
 │   │
 │   ├── lib/
 │   │   ├── cognodb.ts         # Singleton Neo4j Bolt driver & health check
-│   │   ├── queries.ts         # Parameterized Cypher query catalogue
+│   │   ├── queries.ts         # Parameterized Cypher query catalog
+│   │   ├── user-store.tsx     # Session management & user library state
 │   │   └── mock-data.ts       # Mirrored in-memory fallback graph
 │   │
-│   └── types/                 # TypeScript interfaces for all graph entities
+│   ├── middleware.ts          # Edge authentication protection
+│   └── types/                 # TypeScript interfaces for graph entities
 │
-├── README.md                  # Project documentation & graph architectural justification
+├── README.md                  # Comprehensive documentation & architecture guide
 └── package.json               # Dependencies & scripts
 ```
 
 ---
 
-## 🛡️ Resilience & Security
-- **Parameterization**: 100% of Cypher queries use parameterized inputs via `neo4j-driver` (zero string concatenation, zero Cypher injection risk).
-- **Connection Lifecycle**: Automatic session pooling and cleanup in `try...finally` blocks.
-- **Graceful Fallback**: If the CognoDB instance is unreachable or sleeping, the UI seamlessly transitions to its mirrored in-memory graph repository without crashing.
+## 🛡️ Security & Engineering Standards
+
+* **Strict Query Parameterization**: Every openCypher query passes parameters via the official Neo4j driver map — no string template interpolation.
+* **Driver Session Management**: Proper session lifecycle handling (`session.close()` in `try...finally` blocks) preventing connection leaks.
+* **Secure Secrets**: Connection credentials and passwords are read exclusively from environment variables and never exposed to the client bundle.
+* **Edge Route Protection**: Native WebCrypto token verification ensures only authenticated sessions access protected application routes.
+* **Graceful Degradation**: If CognoDB is temporarily unreachable or paused, the application degrades gracefully to its local in-memory fallback repository without throwing runtime errors.
+
+---
+
+## 👤 Author
+* **Submission by**: Peter Mmuo
+* **Submission Subject**: *CognoDB Assignment 2 – Peter Mmuo*
+* **Contact**: hr@wexa.ai
