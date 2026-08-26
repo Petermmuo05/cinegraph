@@ -8,7 +8,7 @@
 
 ## 🍿 The Story Behind CineGraph
 
-A while ago, I built and launched my very first hosted hobby project: [FilmPad](https://filmpad.click). I made it to feed my own movie addiction and help me organize movie recommendations I kept saving from TikTok videos into a clean watchlist. To my surprise, a few thousand people discovered it and started using it with me! 
+A while ago, I built and launched my hosted hobby project: [FilmPad](https://filmpad.click). I made it to feed my own movie addiction and help me organize movie recommendations I kept saving from TikTok videos into a clean watchlist. To my surprise, a few thousand people discovered it and started using it with me! 
 
 But as much as I loved FilmPad, it had one glaring limitation: **it wasn't actually an intelligent recommendation engine**. It was essentially a glorified movie notepad. It relied on static lists from TMDB and simple AI prompts to extract movie titles from TikTok captions. It had no concept of *how* movies connect, why you love a specific filmmaker's style, or how an actor's collaborations with visionary directors create distinct artistic eras.
 
