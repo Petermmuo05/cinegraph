@@ -41,11 +41,11 @@ export default function PersonaSelector({
     <div className="space-y-3">
       <div className="flex items-center justify-between">
         <label className="text-xs font-semibold text-white/60 uppercase tracking-wider">
-          Active Graph Taste Persona
+          Explore Sample Taste Profiles
         </label>
         <span className="text-[11px] text-emerald-400 font-medium flex items-center gap-1">
           <Sparkles className="w-3 h-3" />
-          Collaborative Filtering & Thematic Traversal
+          Instant Movie Matching
         </span>
       </div>
 

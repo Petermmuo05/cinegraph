@@ -169,17 +169,17 @@ export default function HomePage() {
         <div>
           <div className="flex items-center gap-2 mb-1">
             <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-bold text-xs border border-emerald-500/20 whitespace-nowrap">
-              Personalized openCypher Feed
+              Tailored For You
             </span>
             <span className="text-xs text-white/50 hidden sm:inline whitespace-nowrap font-mono">
-              Live CognoDB • 936 Nodes Active
+              Live CognoDB • 936 Movies & Creators
             </span>
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
             Hello {currentUser.username}! 👋
           </h1>
           <p className="text-xs sm:text-sm text-white/60 mt-0.5">
-            Explore graph-powered cinema recommendations and deep relational provenance.
+            Explore graph-powered cinema recommendations and see how your favorite movies connect.
           </p>
         </div>
       </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-accent-gold" />
             <h2 className="text-sm font-bold uppercase tracking-wider text-white/70">
-              Spotlight Recommendations for You
+              Spotlight Recommendations
             </h2>
           </div>
           <span className="text-[11px] font-mono text-emerald-400">
@@ -203,17 +203,17 @@ export default function HomePage() {
         ) : (
           <div className="h-64 rounded-3xl glass-card flex items-center justify-center gap-2 text-white/50 text-xs">
             <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
-            <span>Calculating Graph Spotlight...</span>
+            <span>Finding Spotlight Movies...</span>
           </div>
         )}
       </section>
 
-      {/* 4. Recommendation Shelf: Trending in Social Graph Circle */}
+      {/* 4. Recommendation Shelf: Trending in Social Circle */}
       {socialTrendingRecs.length > 0 && (
         <section>
           <MovieShelf
-            title="Trending in Your Cinephile Circle"
-            subtitle="Films experiencing highest rating velocity and watchlists among connected peers"
+            title="Trending Among Movie Fans"
+            subtitle="Popular films frequently watched and highly rated by people with similar taste"
             icon={<TrendingUp className="w-5 h-5 text-emerald-400" />}
             movies={socialTrendingRecs}
             seeAllHref="/recommendations"
@@ -225,8 +225,8 @@ export default function HomePage() {
       {indieRecs.length > 0 && (
         <section>
           <MovieShelf
-            title="A24 & Surrealist Multiverse Gems"
-            subtitle="Poetic cinema, ontological multiverse structures, and emotional resonance"
+            title="Indie & Visually Stunning Gems"
+            subtitle="Mind-bending stories, visual poetry, and acclaimed indie favorites"
             icon={<Palette className="w-5 h-5 text-pink-400" />}
             movies={indieRecs}
             seeAllHref="/recommendations"
@@ -234,12 +234,12 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* 6. Recommendation Shelf: Classic Crime Noir & Antiheroes */}
+      {/* 6. Recommendation Shelf: Classic Crime Noir & Thrillers */}
       {crimeRecs.length > 0 && (
         <section>
           <MovieShelf
-            title="Crime Noir & Morally Ambiguous Antiheroes"
-            subtitle="Gritty underworlds, tactical heists, and psychological tension"
+            title="Crime & Psychological Thrillers"
+            subtitle="Gritty underworld stories, tactical heists, and intense suspense"
             icon={<ShieldAlert className="w-5 h-5 text-cyan-400" />}
             movies={crimeRecs}
             seeAllHref="/recommendations"
@@ -251,8 +251,8 @@ export default function HomePage() {
       {sciFiRecs.length > 0 && (
         <section>
           <MovieShelf
-            title="Sci-Fi & Cosmic Horizons"
-            subtitle="Speculative physics, sentient intelligence, and vast interplanetary scale"
+            title="Sci-Fi & Cosmic Adventures"
+            subtitle="Futuristic worlds, space exploration, and mind-bending ideas"
             icon={<Atom className="w-5 h-5 text-emerald-400" />}
             movies={sciFiRecs}
             seeAllHref="/recommendations"
@@ -264,8 +264,8 @@ export default function HomePage() {
       {cultGemsRecs.length > 0 && (
         <section>
           <MovieShelf
-            title="Universal Cinematic Masterpieces (IMDb 8.5+)"
-            subtitle="All-time landmark achievements in world cinema"
+            title="Top-Rated Masterpieces (IMDb 8.5+)"
+            subtitle="Timeless classics and landmark achievements in cinema"
             icon={<Award className="w-5 h-5 text-accent-gold" />}
             movies={cultGemsRecs}
             seeAllHref="/recommendations"

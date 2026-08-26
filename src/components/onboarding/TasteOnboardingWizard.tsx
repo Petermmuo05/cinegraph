@@ -121,10 +121,10 @@ export default function TasteOnboardingWizard({ isOpen, onComplete }: TasteOnboa
 
             <div className="space-y-2">
               <h3 className="text-2xl font-extrabold text-white tracking-tight">
-                Compiling Cinematic Knowledge Graph...
+                Finding the Best Movies For You...
               </h3>
               <p className="text-sm text-emerald-400/80 font-mono">
-                Running openCypher Multi-Hop Collaborative Traversals across 1,261 nodes & 9,873 relationships
+                Connecting your taste with thousands of top-rated films and creators
               </p>
             </div>
           </div>
@@ -138,10 +138,10 @@ export default function TasteOnboardingWizard({ isOpen, onComplete }: TasteOnboa
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-                    Calibrate Your Taste Radar
+                    Personalize Your Movie Taste
                   </h2>
                   <p className="text-xs text-white/60">
-                    Step {step} of 3 • Customizing your openCypher recommendation graph
+                    Step {step} of 3 • Setting up your personalized recommendations
                   </p>
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function TasteOnboardingWizard({ isOpen, onComplete }: TasteOnboa
               <div className="space-y-5 animate-in fade-in">
                 <div>
                   <h3 className="text-base font-bold text-white">
-                    What genres ignite your cinematic passion?
+                    What are your favorite movie genres?
                   </h3>
                   <p className="text-xs text-white/60 mt-0.5">
                     Select 2 or more genres ({selectedGenres.length} selected)
@@ -200,16 +200,16 @@ export default function TasteOnboardingWizard({ isOpen, onComplete }: TasteOnboa
               </div>
             )}
 
-            {/* STEP 2: Select Favorite Movies (20 movies from CognoDB) */}
+            {/* STEP 2: Select Favorite Movies */}
             {step === 2 && (
               <div className="space-y-4 animate-in fade-in">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div>
                     <h3 className="text-base font-bold text-white">
-                      Select 2+ landmark films from CognoDB
+                      Select movies you&apos;ve enjoyed
                     </h3>
                     <p className="text-xs text-white/60">
-                      These anchor your multi-hop collaborative recommendations ({selectedMovies.length} chosen)
+                      Pick films you love to help us recommend great matches ({selectedMovies.length} chosen)
                     </p>
                   </div>
 
@@ -217,7 +217,7 @@ export default function TasteOnboardingWizard({ isOpen, onComplete }: TasteOnboa
                     <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-white/40" />
                     <input
                       type="text"
-                      placeholder="Filter 20 titles..."
+                      placeholder="Search movies..."
                       value={searchFilter}
                       onChange={(e) => setSearchFilter(e.target.value)}
                       className="w-full pl-8 pr-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-white focus:outline-none focus:border-emerald-400"
@@ -225,11 +225,11 @@ export default function TasteOnboardingWizard({ isOpen, onComplete }: TasteOnboa
                   </div>
                 </div>
 
-                {/* Poster Grid of 20 CognoDB movies */}
+                {/* Poster Grid */}
                 {loadingMovies ? (
                   <div className="py-12 flex items-center justify-center gap-2 text-emerald-400 text-xs">
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    <span>Loading 20 Landmark Movies from CognoDB...</span>
+                    <span>Loading Popular Movies...</span>
                   </div>
                 ) : (
                   <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 max-h-72 overflow-y-auto pr-1">
@@ -272,10 +272,10 @@ export default function TasteOnboardingWizard({ isOpen, onComplete }: TasteOnboa
               <div className="space-y-4 animate-in fade-in">
                 <div>
                   <h3 className="text-base font-bold text-white">
-                    What narrative vibe are you in the mood for tonight?
+                    What kind of movies do you feel like watching?
                   </h3>
                   <p className="text-xs text-white/60 mt-0.5">
-                    Sets real-time weightings for trope and genre graph traversals
+                    Choose a vibe to tailor your recommendations
                   </p>
                 </div>
 

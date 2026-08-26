@@ -107,7 +107,7 @@ export default function PersonDetailPage({ params }: { params: Promise<{ id: str
               className="px-5 py-2.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs flex items-center gap-2 transition-all shadow-neon-emerald"
             >
               <Network className="w-4 h-4" />
-              <span>Explore Filmography Graph</span>
+              <span>Explore Connections in Graph</span>
             </Link>
 
             <Link
@@ -115,7 +115,7 @@ export default function PersonDetailPage({ params }: { params: Promise<{ id: str
               className="px-5 py-2.5 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors"
             >
               <GitMerge className="w-4 h-4 text-cyan-400" />
-              <span>Trace Degrees of Separation</span>
+              <span>Find Connections to Other Actors</span>
             </Link>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function PersonDetailPage({ params }: { params: Promise<{ id: str
       <div className="space-y-4">
         <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
           <Film className="w-5 h-5 text-emerald-400" />
-          <span>Connected Filmography in Graph</span>
+          <span>Filmography & Featured Movies</span>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

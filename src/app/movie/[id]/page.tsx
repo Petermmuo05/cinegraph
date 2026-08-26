@@ -118,14 +118,13 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
           <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-2xl">
             {movie.plotSummary}
           </p>
-
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link
               href={`/graph?nodeId=${movie.id}&name=${encodeURIComponent(movie.title)}&type=Movie`}
               className="px-5 sm:px-6 py-2.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs flex items-center gap-2 transition-all shadow-neon-emerald"
             >
               <Network className="w-4 h-4" />
-              <span>Visualize in Knowledge Graph</span>
+              <span>Explore Connections in Graph</span>
             </Link>
 
             <Link
@@ -133,13 +132,13 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
               className="px-4 sm:px-5 py-2.5 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs flex items-center gap-1.5 transition-colors"
             >
               <Sparkles className="w-3.5 h-3.5 text-accent-gold" />
-              <span>Find Thematic Matches</span>
+              <span>Find Similar Movies</span>
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Relational Metadata Details Grid */}
+      {/* Details Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Cast & Crew Box */}
         <div className="p-6 rounded-[32px] glass-card border border-white/15 space-y-4">
@@ -169,14 +168,14 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
           ))}
 
           <div className="space-y-2 pt-2">
-            <label className="text-[11px] font-semibold text-white/50 uppercase tracking-wider">
-              Featured Actors
+            <label className="text-[11px] font-semibold text-white/50 uppercase tracking-wider block">
+              Lead Cast
             </label>
-            <div className="space-y-2">
-              {cast.map((c) => c.person && (
-                <div key={c.person.id} className="flex items-center justify-between p-3 rounded-2xl bg-white/5 border border-white/10">
+            <div className="grid grid-cols-1 gap-2">
+              {cast.map((c) => c && (
+                <div key={c.person.id} className="flex items-center justify-between p-2.5 rounded-2xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-3">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/20">
+                    <div className="relative w-9 h-9 rounded-full overflow-hidden border border-cyan-400">
                       <Image src={c.person.photoUrl} alt={c.person.name} fill className="object-cover" />
                     </div>
                     <div>
@@ -196,16 +195,16 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
           </div>
         </div>
 
-        {/* Thematic Tropes & Genres */}
+        {/* Themes & Genres */}
         <div className="p-6 rounded-[32px] glass-card border border-white/15 space-y-5">
           <div className="flex items-center gap-2 pb-3 border-b border-white/10">
             <Tag className="w-4 h-4 text-purple-400" />
-            <h2 className="text-sm font-bold text-white uppercase tracking-wider">Genres & Narrative Tropes</h2>
+            <h2 className="text-sm font-bold text-white uppercase tracking-wider">Genres & Themes</h2>
           </div>
 
           <div>
             <label className="text-[11px] font-semibold text-white/50 uppercase tracking-wider mb-2 block">
-              Genre Classification
+              Genres
             </label>
             <div className="flex flex-wrap gap-2">
               {genres.map((g) => g && (
@@ -221,7 +220,7 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
 
           <div>
             <label className="text-[11px] font-semibold text-white/50 uppercase tracking-wider mb-2 block">
-              Narrative Tropes (Used for Multi-Hop Graph Recs)
+              Key Themes & Story Elements
             </label>
             <div className="space-y-2.5">
               {tropes.map((t) => t && (

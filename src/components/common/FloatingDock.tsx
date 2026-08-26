@@ -16,7 +16,7 @@ export default function FloatingDock() {
     { href: "/recommendations", label: "For You", icon: Sparkles },
     { href: "/watchlist", label: "Watchlist", icon: Bookmark, badge: watchlist.length },
     { href: "/graph", label: "Graph View", icon: Network },
-    { href: "/inspector", label: "Cypher", icon: Terminal },
+    { href: "/inspector", label: "Query Console", icon: Terminal },
   ];
 
   return (

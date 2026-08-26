@@ -17,15 +17,15 @@ ORDER BY Rating DESC`
 
   const presetQueries = [
     {
-      title: "1. Six Degrees Shortest Path (O(V+E))",
-      description: "Finds shortest relational path between Timothée Chalamet and Cillian Murphy",
+      title: "1. Six Degrees Connection Path",
+      description: "Finds the shortest link between Timothée Chalamet and Cillian Murphy",
       cypher: `MATCH (start:Person {name: "Timothée Chalamet"}), (target:Person {name: "Cillian Murphy"})
 MATCH p = shortestPath((start)-[:ACTED_IN|DIRECTED*..8]-(target))
 RETURN p, length(p) AS DegreesOfSeparation`,
     },
     {
-      title: "2. Multi-Hop Recommendation Traversal (3+ Hops)",
-      description: "Finds movies connected by shared actors, directors, and tropes, excluding watched titles",
+      title: "2. Smart Movie Recommendations",
+      description: "Finds unwatched movies connected by shared actors, directors, and themes",
       cypher: `MATCH (u:User {id: "u-scifilover"})-[r:RATED]->(m:Movie)
 WHERE r.rating >= 8.0
 MATCH (m)-[:IN_GENRE]->(g:Genre)<-[:IN_GENRE]-(rec:Movie)
@@ -42,8 +42,8 @@ RETURN rec.title AS Title,
 ORDER BY Rating DESC LIMIT 6`,
     },
     {
-      title: "3. Frequent Creative Collaborations (Cliques)",
-      description: "Finds director-actor pairs with 2+ joint films and calculates average score",
+      title: "3. Frequent Director & Actor Duos",
+      description: "Finds director-actor pairs with 2+ joint films and their average rating",
       cypher: `MATCH (d:Person)-[:DIRECTED]->(m:Movie)<-[:ACTED_IN]-(a:Person)
 WHERE d.id <> a.id
 WITH d, a, count(m) AS Collaborations, collect(m.title) AS Movies, avg(m.imdbRating) AS AvgRating
@@ -52,8 +52,8 @@ RETURN d.name AS Director, a.name AS Actor, Collaborations, AvgRating, Movies
 ORDER BY Collaborations DESC, AvgRating DESC`,
     },
     {
-      title: "4. Graph Centrality: Top Connected Cinematic Nodes",
-      description: "Measures relationship in-degree centrality across the entire knowledge graph",
+      title: "4. Most Connected Movies & Creators",
+      description: "Finds the most connected entities across the entire movie database",
       cypher: `MATCH (n)
 OPTIONAL MATCH (n)-[r]-()
 WITH n, labels(n)[0] AS Label, count(r) AS DegreeCentrality
@@ -99,18 +99,18 @@ ORDER BY DegreeCentrality DESC LIMIT 10`,
             <Terminal className="w-5 h-5" />
           </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Live openCypher Query Workbench
+            Live Graph Query Console
           </h1>
         </div>
         <p className="text-xs sm:text-sm text-white/60 mt-1">
-          Designed for technical evaluators and reviewers to test parameterized openCypher queries directly against CognoDB with millisecond latency metrics.
+          Run live openCypher queries directly on CognoDB to inspect graph nodes, connections, and performance in real time.
         </p>
       </div>
 
       {/* Presets Row */}
       <div className="space-y-3">
         <label className="text-xs font-semibold text-white/60 uppercase tracking-wider">
-          Evaluation Preset Queries (Graph Traversal Tests)
+          Example Queries
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {presetQueries.map((p) => (

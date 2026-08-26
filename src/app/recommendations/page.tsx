@@ -95,11 +95,11 @@ function RecommendationsContent() {
               <Sparkles className="w-5 h-5" />
             </span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Explainable Graph Recommendations
+              Personalized Movie Recommendations
             </h1>
           </div>
           <p className="text-xs sm:text-sm text-white/60 mt-1">
-            Unlike black-box neural networks, every suggestion here is transparently traceable along multi-hop openCypher graph traversals.
+            Discover handpicked movies based on your taste, and see exactly why each film is recommended for you.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ function RecommendationsContent() {
           className="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 text-xs font-semibold text-white/80 hover:text-white flex items-center gap-2 transition-colors self-start sm:self-auto"
         >
           <Terminal className="w-3.5 h-3.5 text-cyan-400" />
-          <span>{showQuery ? "Hide openCypher Query" : "View openCypher Query"}</span>
+          <span>{showQuery ? "Hide Technical Query" : "View Technical Query"}</span>
         </button>
       </div>
 
@@ -122,16 +122,16 @@ function RecommendationsContent() {
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-accent-gold/20 text-accent-gold border border-accent-gold/30">
-                  Thematic Neighborhood Matches
+                  Similar Movies
                 </span>
                 {movieContext.genre && <span className="text-xs text-white/60">• Genre: <strong className="text-white">{movieContext.genre}</strong></span>}
                 {movieContext.director && <span className="text-xs text-white/60">• Director: <strong className="text-white">{movieContext.director}</strong></span>}
               </div>
               <h2 className="text-sm sm:text-base font-bold text-white tracking-tight mt-0.5">
-                Thematic Provenance: <span className="text-accent-gold font-extrabold">{movieContext.title}</span>
+                Recommendations Based On: <span className="text-accent-gold font-extrabold">{movieContext.title}</span>
               </h2>
               <p className="text-xs text-white/60 line-clamp-1">
-                Displaying multi-hop graph neighbors: {movieContext.genre || "General"} cluster • {movieContext.director ? `Directed by ${movieContext.director}` : "Auteur Network"}.
+                Showing films with similar themes, storylines, and creative styles.
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ function RecommendationsContent() {
             onClick={handleResetToPersona}
             className="w-full sm:w-auto px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-semibold text-white/90 hover:text-white transition-colors flex items-center justify-center gap-1.5 flex-shrink-0"
           >
-            <span>Switch to Persona Mode</span>
+            <span>Show All Recommendations</span>
           </button>
         </div>
       ) : (
@@ -151,26 +151,26 @@ function RecommendationsContent() {
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                  Active Taste Persona
+                  Taste Profile
                 </span>
-                <span className="text-xs text-white/50">• Live CognoDB Sub-Graph Traversal</span>
+                <span className="text-xs text-white/50">• Real-Time Matching</span>
               </div>
               <h2 className="text-sm sm:text-base font-bold text-white tracking-tight mt-0.5">
-                Cohort: <span className="text-emerald-400 font-extrabold">
-                  {selectedUser === "u-cinephile" ? "NoirMaster (Crime & Classic Noir)" : selectedUser === "u-indiebuff" ? "A24Vibes (Indie & Surrealism)" : "AuraCinema (Sci-Fi & Mind-Bending)"}
+                Active Style: <span className="text-emerald-400 font-extrabold">
+                  {selectedUser === "u-cinephile" ? "Crime & Classic Noir" : selectedUser === "u-indiebuff" ? "Indie & Surrealism" : "Sci-Fi & Mind-Bending"}
                 </span>
               </h2>
               <p className="text-xs text-white/60 line-clamp-1">
                 {selectedUser === "u-cinephile"
-                  ? "Traversing Scorsese, Coppola, antihero tropes & Crime Noir cohorts in CognoDB"
+                  ? "Focused on gripping dialogues, iconic directors like Scorsese, and classic crime stories"
                   : selectedUser === "u-indiebuff"
-                  ? "Traversing A24, multiverse, existential dread & surrealist indie networks"
-                  : "Traversing non-linear timelines, Nolan, Villeneuve & cosmic physics networks"}
+                  ? "Focused on poetic indie gems, multiverse narratives, and unique visual styles"
+                  : "Focused on cosmic scale, time dilation, and visionary directors like Nolan & Villeneuve"}
               </p>
             </div>
           </div>
           <span className="text-[11px] font-mono text-emerald-400 px-3 py-1 rounded-full bg-black/40 border border-emerald-500/30 self-start sm:self-auto flex-shrink-0">
-            openCypher Multi-Hop
+            Graph Powered
           </span>
         </div>
       )}
@@ -180,9 +180,9 @@ function RecommendationsContent() {
         <div className="p-5 rounded-3xl glass-card border border-cyan-500/30 bg-[#040D0A]/90 animate-in slide-in-from-top-4 duration-200">
           <div className="flex items-center justify-between pb-2 border-b border-white/10 mb-3">
             <span className="text-xs font-mono font-bold text-cyan-400">
-              Parameterized Multi-Hop Recommendation Cypher Query
+              Underlying Graph Query
             </span>
-            <span className="text-[11px] text-white/40">3-6 Hops Traversal</span>
+            <span className="text-[11px] text-white/40">Multi-Hop Traversal</span>
           </div>
           <pre className="text-xs font-mono text-emerald-300/90 overflow-x-auto p-3 rounded-2xl bg-black/50 border border-white/5 leading-relaxed">
 {`MATCH (u:User {id: $userId})
@@ -214,9 +214,9 @@ LIMIT 8`}
       <div>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-white tracking-tight flex items-center gap-2">
-            <span>Recommended For Active Persona</span>
+            <span>Curated For You</span>
             <span className="text-xs font-mono text-emerald-400 font-normal">
-              ({recommendations.length} curated matches)
+              ({recommendations.length} matches)
             </span>
           </h2>
           <button
@@ -237,8 +237,8 @@ LIMIT 8`}
         ) : recommendations.length === 0 ? (
           <div className="p-12 rounded-[32px] glass-card text-center space-y-3">
             <Sparkles className="w-8 h-8 text-emerald-400 mx-auto" />
-            <h3 className="text-base font-bold text-white">No Thematic Matches in Current Filter</h3>
-            <p className="text-xs text-white/50">Try switching personas or resetting the thematic filter.</p>
+            <h3 className="text-base font-bold text-white">No Matches Found</h3>
+            <p className="text-xs text-white/50">Try switching profiles or clearing the filter.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -35,8 +35,8 @@ export default function TasteTunerModal() {
               <SlidersHorizontal className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-white tracking-tight">Tune Recommendation Engine</h2>
-              <p className="text-xs text-white/60">Choose your current cinematic vibe or seed your favorite films.</p>
+              <h2 className="text-xl font-bold text-white tracking-tight">Fine-Tune Your Recommendations</h2>
+              <p className="text-xs text-white/60">Choose your current movie vibe and select favorites to update suggestions.</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export default function TasteTunerModal() {
           </button>
         </div>
 
-        {/* Mood Archetype Selector */}
+        {/* Mood Selector */}
         <div className="space-y-3">
           <label className="text-xs font-bold uppercase tracking-wider text-emerald-400">
             1. Select Your Current Vibe
@@ -83,7 +83,7 @@ export default function TasteTunerModal() {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <label className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-              2. Seed Titles You Love ({likedMovies.length} selected)
+              2. Pick Movies You Love ({likedMovies.length} selected)
             </label>
             <span className="text-[11px] text-white/50">Click to toggle</span>
           </div>

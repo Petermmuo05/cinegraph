@@ -63,11 +63,11 @@ function PathFinderContent() {
             <GitMerge className="w-5 h-5" />
           </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Six Degrees of Cinema: Shortest Path Traversal
+            Degrees of Separation: Movie Connection Finder
           </h1>
         </div>
         <p className="text-xs sm:text-sm text-white/60 mt-1">
-          Trace the exact collaborative lineage between any two individuals in openCypher shortestPath() graph time.
+          Discover how any two actors or directors are connected through the movies they’ve made together.
         </p>
       </div>
 
@@ -80,20 +80,20 @@ function PathFinderContent() {
           <div>
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                Six Degrees Traversal
+                Connection Path
               </span>
-              <span className="text-xs text-white/50">• openCypher shortestPath()</span>
+              <span className="text-xs text-white/50">• Real-Time Search</span>
             </div>
             <h2 className="text-sm sm:text-base font-bold text-white tracking-tight mt-0.5">
               Connecting <span className="text-emerald-400 font-extrabold">{fromPerson}</span> <span className="text-cyan-400">➔</span> <span className="text-cyan-400 font-extrabold">{toPerson}</span>
             </h2>
             <p className="text-xs text-white/60 line-clamp-1">
-              Traversing shared filmography, cast edges (:ACTED_IN), and directorship edges (:DIRECTED) in CognoDB.
+              Finding the shortest path through shared co-stars, movies, and directors.
             </p>
           </div>
         </div>
         <span className="text-[11px] font-mono text-cyan-400 px-3 py-1 rounded-full bg-black/40 border border-cyan-500/30 self-start sm:self-auto flex-shrink-0">
-          Bidirectional BFS
+          Instant Match
         </span>
       </div>
 

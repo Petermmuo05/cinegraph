@@ -301,7 +301,7 @@ export async function getExplainableRecommendations(
                rec.tagline AS tagline,
                cohortCount,
                sharedLikers,
-               ['Trending in Cinephile Cohort'] AS becauseYouLiked,
+               ['Popular among movie fans'] AS becauseYouLiked,
                directors,
                tropes,
                genres,
@@ -468,7 +468,7 @@ export async function getExplainableRecommendations(
                rec.tagline AS tagline,
                cohortCount,
                sharedLikers,
-               [u.favoriteGenre + ' Cinephile Cohort'] AS becauseYouLiked,
+               [u.favoriteGenre + ' fans'] AS becauseYouLiked,
                directors,
                tropes,
                genres,
@@ -489,8 +489,8 @@ export async function getExplainableRecommendations(
       const affinityScore = Math.min(99, Math.round(84 + Math.min(15, cohortCount * 1.5)));
       const reasons: string[] = [];
       if (r.directors?.length) reasons.push(`Directed by ${r.directors[0]}`);
-      if (r.tropes?.length) reasons.push(`Tropes: ${r.tropes.slice(0, 2).join(", ")}`);
-      if (r.becauseYouLiked?.length) reasons.push(`Because you liked ${r.becauseYouLiked.join(" & ")}`);
+      if (r.tropes?.length) reasons.push(`Themes: ${r.tropes.slice(0, 2).join(", ")}`);
+      if (r.becauseYouLiked?.length) reasons.push(`Recommended for ${r.becauseYouLiked.join(" & ")}`);
 
       return {
         movie: {
@@ -509,8 +509,8 @@ export async function getExplainableRecommendations(
         director: r.directors?.[0] || "Acclaimed Director",
         actors: [],
         tropes: r.tropes || [],
-        reason: reasons.length ? reasons.join(" • ") : "High collaborative cinephile overlap.",
-        connectedFrom: r.becauseYouLiked || ["Liked films in your graph"],
+        reason: reasons.length ? reasons.join(" • ") : "Highly rated by viewers with similar taste.",
+        connectedFrom: r.becauseYouLiked || ["Liked films in your collection"],
         graphPathHops: 3,
         cohortOverlap: cohortCount,
         sharedLikers: r.sharedLikers || [],

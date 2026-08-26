@@ -57,14 +57,14 @@ export default function WatchlistPage() {
           <div>
             <div className="flex items-center gap-2 mb-1">
               <h1 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-                {currentUser.username}&rsquo;s Cinema Vault
+                {currentUser.username}&rsquo;s Movie Library
               </h1>
               <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                {currentUser.favoriteGenre} Devotee
+                {currentUser.favoriteGenre} Fan
               </span>
             </div>
             <p className="text-xs text-white/60">
-              Your personalized graph repository powering real-time openCypher recommendations.
+              Your saved movies and favorites that help shape your personalized recommendations.
             </p>
           </div>
         </div>
@@ -131,14 +131,14 @@ export default function WatchlistPage() {
           {loading ? (
             <div className="p-12 text-center text-white/50 flex items-center justify-center gap-2 text-xs">
               <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
-              <span>Querying CognoDB Cinema Vault...</span>
+              <span>Loading Your Movie Library...</span>
             </div>
           ) : displayedMovies.length === 0 ? (
             <div className="p-12 rounded-[32px] glass-card text-center space-y-3">
               <Film className="w-10 h-10 text-white/30 mx-auto" />
               <h3 className="text-base font-bold text-white">Your list is currently empty</h3>
               <p className="text-xs text-white/50 max-w-sm mx-auto">
-                Explore the discover feed or search for movies to seed your taste graph.
+                Explore the discover feed or search for movies to build your personalized taste.
               </p>
               <Link
                 href="/"
@@ -185,9 +185,9 @@ export default function WatchlistPage() {
                   {/* Actions */}
                   <div className="flex items-center gap-3 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-white/10">
                     <Link
-                      href={`/graph?nodeId=${movie.id}`}
+                      href={`/graph?nodeId=${movie.id}&name=${encodeURIComponent(movie.title)}&type=Movie`}
                       className="p-2 rounded-xl bg-white/5 hover:bg-emerald-500/20 text-white/60 hover:text-emerald-300 transition-colors"
-                      title="View in Knowledge Graph"
+                      title="View Connections in Graph"
                     >
                       <Network className="w-4 h-4" />
                     </Link>
@@ -206,20 +206,20 @@ export default function WatchlistPage() {
           )}
         </div>
 
-        {/* Right Column: Visual Graph Taste Radar */}
+        {/* Right Column: Visual Taste Radar */}
         <div className="lg:col-span-4 space-y-6">
           <div className="p-6 rounded-[32px] glass-card border border-white/15 space-y-5 shadow-xl">
             <div className="flex items-center gap-2 pb-3 border-b border-white/10">
               <TrendingUp className="w-4 h-4 text-emerald-400" />
               <h3 className="text-sm font-bold text-white uppercase tracking-wider">
-                Graph Taste Radar
+                Taste Breakdown
               </h3>
             </div>
 
             {/* Dominant Genres */}
             <div className="space-y-2">
               <label className="text-xs font-semibold text-white/60 uppercase tracking-wider">
-                Dominant Genre Clusters
+                Top Genres
               </label>
               <div className="space-y-2">
                 <div>
@@ -234,7 +234,7 @@ export default function WatchlistPage() {
 
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-white/80">Drama & Tension</span>
+                    <span className="text-white/80">Drama & Thrillers</span>
                     <span className="text-cyan-400 font-mono">30%</span>
                   </div>
                   <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
@@ -244,7 +244,7 @@ export default function WatchlistPage() {
 
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-white/80">Crime & Neo-Noir</span>
+                    <span className="text-white/80">Crime & Mystery</span>
                     <span className="text-purple-400 font-mono">15%</span>
                   </div>
                   <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
@@ -257,7 +257,7 @@ export default function WatchlistPage() {
             {/* Favorite Recurring Directors */}
             <div className="space-y-2 pt-2 border-t border-white/10">
               <label className="text-xs font-semibold text-white/60 uppercase tracking-wider">
-                Favorite Auteurs in Graph
+                Favorite Directors
               </label>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-semibold border border-emerald-500/20">
@@ -275,10 +275,10 @@ export default function WatchlistPage() {
             {/* Dominant Tropes */}
             <div className="space-y-2 pt-2 border-t border-white/10">
               <label className="text-xs font-semibold text-white/60 uppercase tracking-wider">
-                Key Narrative Tropes
+                Favorite Themes & Story Elements
               </label>
               <div className="flex flex-wrap gap-1.5">
-                {["Non-Linear Timeline", "Time Dilation", "Sentient AI", "Antihero", "Multiverse"].map((t) => (
+                {["Mind-Bending", "Time Travel", "Artificial Intelligence", "Complex Antiheroes", "Multiverse"].map((t) => (
                   <span
                     key={t}
                     className="px-2.5 py-0.5 rounded-lg bg-white/5 border border-white/10 text-white/70 text-[11px]"

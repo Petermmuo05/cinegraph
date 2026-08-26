@@ -26,7 +26,7 @@ interface HeaderProps {
 export default function Header({ onOpenSearch }: HeaderProps) {
   const pathname = usePathname();
   const router = useRouter();
-  const { currentUser, isAuthenticated, watchlist, setIsTasteModalOpen, logout } = useUser();
+  const { currentUser, isAuthenticated, watchlist, likedMovies, setIsTasteModalOpen, logout } = useUser();
   const [showUserMenu, setShowUserMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -48,6 +48,7 @@ export default function Header({ onOpenSearch }: HeaderProps) {
   };
 
   const isUserLoggedIn = isAuthenticated && currentUser && currentUser.id !== "guest";
+  const hasTasteData = (watchlist && watchlist.length > 0) || (likedMovies && likedMovies.length > 0);
 
   return (
     <header className="sticky top-0 z-40 w-full bg-[#040D0A]/85 backdrop-blur-2xl border-b border-white/10 select-none">
@@ -192,16 +193,18 @@ export default function Header({ onOpenSearch }: HeaderProps) {
 
                   {/* Authenticated User Menu Actions */}
                   <div className="space-y-1">
-                    <button
-                      onClick={() => {
-                        setShowUserMenu(false);
-                        setIsTasteModalOpen(true);
-                      }}
-                      className="w-full px-3 py-2 rounded-xl hover:bg-white/10 text-left text-xs font-medium text-white/80 flex items-center gap-2 transition-colors"
-                    >
-                      <SlidersHorizontal className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>Tune Taste Preferences</span>
-                    </button>
+                    {!hasTasteData && (
+                      <button
+                        onClick={() => {
+                          setShowUserMenu(false);
+                          setIsTasteModalOpen(true);
+                        }}
+                        className="w-full px-3 py-2 rounded-xl hover:bg-white/10 text-left text-xs font-medium text-white/80 flex items-center gap-2 transition-colors"
+                      >
+                        <SlidersHorizontal className="w-3.5 h-3.5 text-emerald-400" />
+                        <span>Fine-Tune Recommendations</span>
+                      </button>
+                    )}
 
                     <Link
                       href="/watchlist"

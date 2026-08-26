@@ -34,7 +34,7 @@ export default function RecCard({ rec }: RecCardProps) {
 
           {/* Hops Indicator */}
           <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white/80 text-[11px] font-mono">
-            {graphPathHops}-Hop Traversal
+            {graphPathHops} Steps Away
           </div>
 
           {/* Bottom Overlay Info */}
@@ -63,7 +63,7 @@ export default function RecCard({ rec }: RecCardProps) {
           <div className="p-3 rounded-2xl bg-emerald-950/30 border border-emerald-500/20 space-y-2">
             <div className="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-400 uppercase tracking-wider">
               <Network className="w-3.5 h-3.5" />
-              <span>Graph Path Rationale</span>
+              <span>Why It&apos;s Recommended</span>
             </div>
             <p className="text-xs text-white/80 leading-relaxed font-medium">
               {reason}
@@ -95,7 +95,7 @@ export default function RecCard({ rec }: RecCardProps) {
           href={`/graph?nodeId=${movie.id}&name=${encodeURIComponent(movie.title)}&type=Movie`}
           className="w-full py-2.5 rounded-2xl bg-white/5 hover:bg-emerald-500/20 hover:border-emerald-500/40 border border-white/15 text-white hover:text-emerald-300 font-semibold text-xs flex items-center justify-center gap-2 transition-all group/btn"
         >
-          <span>Visualize In Graph</span>
+          <span>Explore Connections in Graph</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
         </Link>
       </div>
