@@ -4,7 +4,7 @@
 > **Backed by**: [CognoDB Cloud](https://console.cognodb.com) (openCypher / Bolt 5.4)  
 > **Stack**: Next.js 15 (App Router), TypeScript, Tailwind CSS, Framer Motion, official `neo4j-driver`
 > **Login Credentials**: username: claire / password: fresh2026
-
+> **Demo/Screen Recording**: https://drive.google.com/drive/folders/1P2uMOCVMjYoJ0OQS5cV4oJuZQF5CktyR?usp=drive_link
 ---
 
 ## The Story Behind CineGraph
