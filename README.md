@@ -6,6 +6,11 @@
 > **Login Credentials**: username: claire / password: fresh2026
 
 ---
+<img width="410" height="374" alt="image" src="https://github.com/user-attachments/assets/c73d9f4e-9144-422b-ba20-f9e27d016863" />
+<img width="413" height="367" alt="image" src="https://github.com/user-attachments/assets/54620103-5283-4282-8a51-b2219239a436" />
+<img width="407" height="373" alt="image" src="https://github.com/user-attachments/assets/3b4ae6db-a63f-4d1c-a8a0-083772b26d1b" />
+<img width="407" height="368" alt="image" src="https://github.com/user-attachments/assets/7a8112c0-170d-4988-b751-814312c0e79d" />
+
 
 ## The Story Behind CineGraph
 
