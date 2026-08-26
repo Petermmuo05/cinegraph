@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 4 13 10;
+    --foreground: 243 250 247;
+  }
+
+  body {
+    background-color: #040D0A;
+    color: #F3FAF7;
+    font-family: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Custom high-end scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #040D0A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.5);
+  }
+}
+
+@layer utilities {
+  /* Liquid Glass 2.0 Utilities */
+  .glass-panel {
+    background: rgba(9, 26, 20, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg, rgba(9, 26, 20, 0.8) 0%, rgba(6, 18, 14, 0.6) 100%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(16, 185, 129, 0.1);
+    border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 20px -5px rgba(16, 185, 129, 0.1);
+  }
+
+  .glass-dock {
+    background: rgba(4, 18, 14, 0.85);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.2);
+  }
+
+  .glass-pill {
+    background: rgba(16, 185, 129, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+  }
+
+  .glass-pill:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(52, 211, 153, 0.5);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 12px rgba(52, 211, 153, 0.4);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.5);
+  }
+
+  .curved-card {
+    border-radius: 32px;
+  }
+}

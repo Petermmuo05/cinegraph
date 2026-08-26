@@ -1,0 +1,2596 @@
+{
+  "genres": [
+    {
+      "id": "g-scifi",
+      "name": "Science Fiction",
+      "colorHex": "#10B981",
+      "icon": "Atom"
+    },
+    {
+      "id": "g-drama",
+      "name": "Drama",
+      "colorHex": "#8B5CF6",
+      "icon": "Film"
+    },
+    {
+      "id": "g-action",
+      "name": "Action",
+      "colorHex": "#EF4444",
+      "icon": "Flame"
+    },
+    {
+      "id": "g-crime",
+      "name": "Crime",
+      "colorHex": "#06B6D4",
+      "icon": "ShieldAlert"
+    },
+    {
+      "id": "g-thriller",
+      "name": "Thriller",
+      "colorHex": "#F59E0B",
+      "icon": "Eye"
+    },
+    {
+      "id": "g-animation",
+      "name": "Animation",
+      "colorHex": "#EC4899",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "g-adventure",
+      "name": "Adventure",
+      "colorHex": "#14B8A6",
+      "icon": "Compass"
+    },
+    {
+      "id": "g-mystery",
+      "name": "Mystery",
+      "colorHex": "#6366F1",
+      "icon": "Search"
+    },
+    {
+      "id": "g-comedy",
+      "name": "Comedy",
+      "colorHex": "#EAB308",
+      "icon": "Smile"
+    },
+    {
+      "id": "g-fantasy",
+      "name": "Fantasy",
+      "colorHex": "#A855F7",
+      "icon": "Wand2"
+    },
+    {
+      "id": "g-biography",
+      "name": "Biography",
+      "colorHex": "#64748B",
+      "icon": "BookOpen"
+    },
+    {
+      "id": "g-history",
+      "name": "History",
+      "colorHex": "#78716C",
+      "icon": "Hourglass"
+    },
+    {
+      "id": "g-horror",
+      "name": "Horror",
+      "colorHex": "#991B1B",
+      "icon": "Skull"
+    },
+    {
+      "id": "g-romance",
+      "name": "Romance",
+      "colorHex": "#F43F5E",
+      "icon": "Heart"
+    },
+    {
+      "id": "g-war",
+      "name": "War",
+      "colorHex": "#475569",
+      "icon": "Shield"
+    },
+    {
+      "id": "g-music",
+      "name": "Music",
+      "colorHex": "#38BDF8",
+      "icon": "Music"
+    }
+  ],
+  "tropes": [
+    {
+      "id": "t-nonlinear",
+      "name": "Non-Linear Timeline",
+      "category": "Temporal Structure",
+      "description": "Narrative unfolds out of chronological sequence, challenging temporal perception."
+    },
+    {
+      "id": "t-timedilation",
+      "name": "Time Dilation",
+      "category": "Temporal Structure",
+      "description": "Gravitational or relativistic physics alter the perceived flow of elapsed time."
+    },
+    {
+      "id": "t-sentientai",
+      "name": "Sentient AI",
+      "category": "Technological Philosophy",
+      "description": "Autonomous artificial consciousness interrogates human existential purpose."
+    },
+    {
+      "id": "t-unreliable",
+      "name": "Unreliable Narrator",
+      "category": "Psychological Tension",
+      "description": "The perspective storyteller compromises objective reality through delusion or deceit."
+    },
+    {
+      "id": "t-antihero",
+      "name": "Morally Ambiguous Antihero",
+      "category": "Character Archetype",
+      "description": "Protagonist operates outside conventional ethical paradigms for complex justice."
+    },
+    {
+      "id": "t-heist",
+      "name": "Heist",
+      "category": "Narrative Objective",
+      "description": "A high-stakes tactical mission requiring precision coordination against impossible odds."
+    },
+    {
+      "id": "t-multiverse",
+      "name": "Multiverse",
+      "category": "Cosmological Concept",
+      "description": "Infinite parallel realities intersecting through ontological choices."
+    },
+    {
+      "id": "t-cosmicdread",
+      "name": "Cosmic Dread",
+      "category": "Existential Tone",
+      "description": "Human insignificance confronted against unfathomable universal forces."
+    },
+    {
+      "id": "t-neonoir",
+      "name": "Neo-Noir",
+      "category": "Atmospheric Aesthetic",
+      "description": "Shadowy urban underworlds steeped in moral cynicism and rain-slicked neon."
+    },
+    {
+      "id": "t-chosenone",
+      "name": "Chosen One",
+      "category": "Mythological Burden",
+      "description": "A messianic figure burdened with shifting the fate of civilization."
+    },
+    {
+      "id": "t-doppelganger",
+      "name": "Doppelgänger",
+      "category": "Identity Crisis",
+      "description": "The psychological terror of encountering one's mirrored self."
+    },
+    {
+      "id": "t-surrealism",
+      "name": "Surrealism",
+      "category": "Aesthetic Innovation",
+      "description": "Dream logic and poetic abstraction supplant linear realism."
+    },
+    {
+      "id": "t-socialstrat",
+      "name": "Social Stratification",
+      "category": "Societal Critique",
+      "description": "Economic division and architecture reflect class warfare."
+    },
+    {
+      "id": "t-in-yun",
+      "name": "In-Yun Destiny",
+      "category": "Spiritual Connection",
+      "description": "Soul connections recurring and reverberating across lifetimes."
+    },
+    {
+      "id": "t-simulated",
+      "name": "Simulated Reality",
+      "category": "Metaphysical Crisis",
+      "description": "Perceived existence is an artificial construct engineered to deceive."
+    }
+  ],
+  "people": [
+    {
+      "id": "p-denisvilleneuve",
+      "name": "Denis Villeneuve",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Dune: Part Two."
+    },
+    {
+      "id": "p-timothechalamet",
+      "name": "Timothée Chalamet",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dune: Part Two."
+    },
+    {
+      "id": "p-zendaya",
+      "name": "Zendaya",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dune: Part Two."
+    },
+    {
+      "id": "p-rebeccaferguson",
+      "name": "Rebecca Ferguson",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dune: Part Two."
+    },
+    {
+      "id": "p-austinbutler",
+      "name": "Austin Butler",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dune: Part Two."
+    },
+    {
+      "id": "p-javierbardem",
+      "name": "Javier Bardem",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dune: Part Two."
+    },
+    {
+      "id": "p-christophernolan",
+      "name": "Christopher Nolan",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Oppenheimer."
+    },
+    {
+      "id": "p-cillianmurphy",
+      "name": "Cillian Murphy",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Oppenheimer."
+    },
+    {
+      "id": "p-robertdowneyjr",
+      "name": "Robert Downey Jr.",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Oppenheimer."
+    },
+    {
+      "id": "p-emilyblunt",
+      "name": "Emily Blunt",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Oppenheimer."
+    },
+    {
+      "id": "p-mattdamon",
+      "name": "Matt Damon",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Oppenheimer."
+    },
+    {
+      "id": "p-florencepugh",
+      "name": "Florence Pugh",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Oppenheimer."
+    },
+    {
+      "id": "p-matthewmcconaughey",
+      "name": "Matthew McConaughey",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Interstellar."
+    },
+    {
+      "id": "p-annehathaway",
+      "name": "Anne Hathaway",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Interstellar."
+    },
+    {
+      "id": "p-jessicachastain",
+      "name": "Jessica Chastain",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Interstellar."
+    },
+    {
+      "id": "p-michaelcaine",
+      "name": "Michael Caine",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Interstellar."
+    },
+    {
+      "id": "p-leonardodicaprio",
+      "name": "Leonardo DiCaprio",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Inception."
+    },
+    {
+      "id": "p-josephgordonlevitt",
+      "name": "Joseph Gordon-Levitt",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Inception."
+    },
+    {
+      "id": "p-elliotpage",
+      "name": "Elliot Page",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Inception."
+    },
+    {
+      "id": "p-tomhardy",
+      "name": "Tom Hardy",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Inception."
+    },
+    {
+      "id": "p-marioncotillard",
+      "name": "Marion Cotillard",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Inception."
+    },
+    {
+      "id": "p-christianbale",
+      "name": "Christian Bale",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Dark Knight."
+    },
+    {
+      "id": "p-heathledger",
+      "name": "Heath Ledger",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Dark Knight."
+    },
+    {
+      "id": "p-garyoldman",
+      "name": "Gary Oldman",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Dark Knight."
+    },
+    {
+      "id": "p-morganfreeman",
+      "name": "Morgan Freeman",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Dark Knight."
+    },
+    {
+      "id": "p-ryangosling",
+      "name": "Ryan Gosling",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Blade Runner 2049."
+    },
+    {
+      "id": "p-harrisonford",
+      "name": "Harrison Ford",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Blade Runner 2049."
+    },
+    {
+      "id": "p-anadearmas",
+      "name": "Ana de Armas",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Blade Runner 2049."
+    },
+    {
+      "id": "p-sylviahoeks",
+      "name": "Sylvia Hoeks",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Blade Runner 2049."
+    },
+    {
+      "id": "p-robinwright",
+      "name": "Robin Wright",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Blade Runner 2049."
+    },
+    {
+      "id": "p-danielkwan",
+      "name": "Daniel Kwan",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Everything Everywhere All at Once."
+    },
+    {
+      "id": "p-michelleyeoh",
+      "name": "Michelle Yeoh",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Everything Everywhere All at Once."
+    },
+    {
+      "id": "p-kehuyquan",
+      "name": "Ke Huy Quan",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Everything Everywhere All at Once."
+    },
+    {
+      "id": "p-stephaniehsu",
+      "name": "Stephanie Hsu",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Everything Everywhere All at Once."
+    },
+    {
+      "id": "p-jamieleecurtis",
+      "name": "Jamie Lee Curtis",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Everything Everywhere All at Once."
+    },
+    {
+      "id": "p-lanawachowski",
+      "name": "Lana Wachowski",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Matrix."
+    },
+    {
+      "id": "p-keanureeves",
+      "name": "Keanu Reeves",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Matrix."
+    },
+    {
+      "id": "p-laurencefishburne",
+      "name": "Laurence Fishburne",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Matrix."
+    },
+    {
+      "id": "p-carrieannemoss",
+      "name": "Carrie-Anne Moss",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Matrix."
+    },
+    {
+      "id": "p-hugoweaving",
+      "name": "Hugo Weaving",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Matrix."
+    },
+    {
+      "id": "p-hughjackman",
+      "name": "Hugh Jackman",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Prestige."
+    },
+    {
+      "id": "p-scarlettjohansson",
+      "name": "Scarlett Johansson",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Prestige."
+    },
+    {
+      "id": "p-davidbowie",
+      "name": "David Bowie",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Prestige."
+    },
+    {
+      "id": "p-martinscorsese",
+      "name": "Martin Scorsese",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Departed."
+    },
+    {
+      "id": "p-jacknicholson",
+      "name": "Jack Nicholson",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Departed."
+    },
+    {
+      "id": "p-markwahlberg",
+      "name": "Mark Wahlberg",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Departed."
+    },
+    {
+      "id": "p-martinsheen",
+      "name": "Martin Sheen",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Departed."
+    },
+    {
+      "id": "p-francisfordcoppola",
+      "name": "Francis Ford Coppola",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Godfather Part II."
+    },
+    {
+      "id": "p-alpacino",
+      "name": "Al Pacino",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Godfather Part II."
+    },
+    {
+      "id": "p-robertdeniro",
+      "name": "Robert De Niro",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Godfather Part II."
+    },
+    {
+      "id": "p-robertduvall",
+      "name": "Robert Duvall",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Godfather Part II."
+    },
+    {
+      "id": "p-dianekeaton",
+      "name": "Diane Keaton",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Godfather Part II."
+    },
+    {
+      "id": "p-johncazale",
+      "name": "John Cazale",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Godfather Part II."
+    },
+    {
+      "id": "p-quentintarantino",
+      "name": "Quentin Tarantino",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Pulp Fiction."
+    },
+    {
+      "id": "p-johntravolta",
+      "name": "John Travolta",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Pulp Fiction."
+    },
+    {
+      "id": "p-samuelljackson",
+      "name": "Samuel L. Jackson",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Pulp Fiction."
+    },
+    {
+      "id": "p-umathurman",
+      "name": "Uma Thurman",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Pulp Fiction."
+    },
+    {
+      "id": "p-brucewillis",
+      "name": "Bruce Willis",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Pulp Fiction."
+    },
+    {
+      "id": "p-vingrhames",
+      "name": "Ving Rhames",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Pulp Fiction."
+    },
+    {
+      "id": "p-joaquimdossantos",
+      "name": "Joaquim Dos Santos",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Spider-Man: Across the Spider-Verse."
+    },
+    {
+      "id": "p-shameikmoore",
+      "name": "Shameik Moore",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spider-Man: Across the Spider-Verse."
+    },
+    {
+      "id": "p-haileesteinfeld",
+      "name": "Hailee Steinfeld",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spider-Man: Across the Spider-Verse."
+    },
+    {
+      "id": "p-oscarisaac",
+      "name": "Oscar Isaac",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spider-Man: Across the Spider-Verse."
+    },
+    {
+      "id": "p-danielkaluuya",
+      "name": "Daniel Kaluuya",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spider-Man: Across the Spider-Verse."
+    },
+    {
+      "id": "p-jakejohnson",
+      "name": "Jake Johnson",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spider-Man: Across the Spider-Verse."
+    },
+    {
+      "id": "p-amyadams",
+      "name": "Amy Adams",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Arrival."
+    },
+    {
+      "id": "p-jeremyrenner",
+      "name": "Jeremy Renner",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Arrival."
+    },
+    {
+      "id": "p-forestwhitaker",
+      "name": "Forest Whitaker",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Arrival."
+    },
+    {
+      "id": "p-michaelstuhlbarg",
+      "name": "Michael Stuhlbarg",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Arrival."
+    },
+    {
+      "id": "p-bongjoonho",
+      "name": "Bong Joon-ho",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Parasite."
+    },
+    {
+      "id": "p-songkangho",
+      "name": "Song Kang-ho",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Parasite."
+    },
+    {
+      "id": "p-leesunkyun",
+      "name": "Lee Sun-kyun",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Parasite."
+    },
+    {
+      "id": "p-choyeojeong",
+      "name": "Cho Yeo-jeong",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Parasite."
+    },
+    {
+      "id": "p-choiwooshik",
+      "name": "Choi Woo-shik",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Parasite."
+    },
+    {
+      "id": "p-parksodam",
+      "name": "Park So-dam",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Parasite."
+    },
+    {
+      "id": "p-damienchazelle",
+      "name": "Damien Chazelle",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Whiplash."
+    },
+    {
+      "id": "p-milesteller",
+      "name": "Miles Teller",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Whiplash."
+    },
+    {
+      "id": "p-jksimmons",
+      "name": "J.K. Simmons",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Whiplash."
+    },
+    {
+      "id": "p-paulreiser",
+      "name": "Paul Reiser",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Whiplash."
+    },
+    {
+      "id": "p-melissabenoist",
+      "name": "Melissa Benoist",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Whiplash."
+    },
+    {
+      "id": "p-davidfincher",
+      "name": "David Fincher",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Fight Club."
+    },
+    {
+      "id": "p-bradpitt",
+      "name": "Brad Pitt",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Fight Club."
+    },
+    {
+      "id": "p-edwardnorton",
+      "name": "Edward Norton",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Fight Club."
+    },
+    {
+      "id": "p-helenabonhamcarter",
+      "name": "Helena Bonham Carter",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Fight Club."
+    },
+    {
+      "id": "p-meatloaf",
+      "name": "Meat Loaf",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Fight Club."
+    },
+    {
+      "id": "p-zachgrenier",
+      "name": "Zach Grenier",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Fight Club."
+    },
+    {
+      "id": "p-gwynethpaltrow",
+      "name": "Gwyneth Paltrow",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Se7en."
+    },
+    {
+      "id": "p-kevinspacey",
+      "name": "Kevin Spacey",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Se7en."
+    },
+    {
+      "id": "p-rayliotta",
+      "name": "Ray Liotta",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Goodfellas."
+    },
+    {
+      "id": "p-joepesci",
+      "name": "Joe Pesci",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Goodfellas."
+    },
+    {
+      "id": "p-lorrainebracco",
+      "name": "Lorraine Bracco",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Goodfellas."
+    },
+    {
+      "id": "p-paulsorvino",
+      "name": "Paul Sorvino",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Goodfellas."
+    },
+    {
+      "id": "p-celinesong",
+      "name": "Celine Song",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Past Lives."
+    },
+    {
+      "id": "p-gretalee",
+      "name": "Greta Lee",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Past Lives."
+    },
+    {
+      "id": "p-teoyoo",
+      "name": "Teo Yoo",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Past Lives."
+    },
+    {
+      "id": "p-johnmagaro",
+      "name": "John Magaro",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Past Lives."
+    },
+    {
+      "id": "p-hayaomiyazaki",
+      "name": "Hayao Miyazaki",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Spirited Away."
+    },
+    {
+      "id": "p-rumihiiragi",
+      "name": "Rumi Hiiragi",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spirited Away."
+    },
+    {
+      "id": "p-miyuirino",
+      "name": "Miyu Irino",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spirited Away."
+    },
+    {
+      "id": "p-marinatsuki",
+      "name": "Mari Natsuki",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spirited Away."
+    },
+    {
+      "id": "p-takashinaito",
+      "name": "Takashi Naito",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spirited Away."
+    },
+    {
+      "id": "p-michaelmann",
+      "name": "Michael Mann",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Heat."
+    },
+    {
+      "id": "p-valkilmer",
+      "name": "Val Kilmer",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Heat."
+    },
+    {
+      "id": "p-jonvoight",
+      "name": "Jon Voight",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Heat."
+    },
+    {
+      "id": "p-tomsizemore",
+      "name": "Tom Sizemore",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Heat."
+    },
+    {
+      "id": "p-fionnwhitehead",
+      "name": "Fionn Whitehead",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dunkirk."
+    },
+    {
+      "id": "p-tomglynncarney",
+      "name": "Tom Glynn-Carney",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dunkirk."
+    },
+    {
+      "id": "p-jacklowden",
+      "name": "Jack Lowden",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dunkirk."
+    },
+    {
+      "id": "p-harrystyles",
+      "name": "Harry Styles",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dunkirk."
+    },
+    {
+      "id": "p-markruffalo",
+      "name": "Mark Ruffalo",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Shutter Island."
+    },
+    {
+      "id": "p-benkingsley",
+      "name": "Ben Kingsley",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Shutter Island."
+    },
+    {
+      "id": "p-michellewilliams",
+      "name": "Michelle Williams",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Shutter Island."
+    },
+    {
+      "id": "p-ridleyscott",
+      "name": "Ridley Scott",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Alien."
+    },
+    {
+      "id": "p-sigourneyweaver",
+      "name": "Sigourney Weaver",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Alien."
+    },
+    {
+      "id": "p-tomskerritt",
+      "name": "Tom Skerritt",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Alien."
+    },
+    {
+      "id": "p-johnhurt",
+      "name": "John Hurt",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Alien."
+    },
+    {
+      "id": "p-ianholm",
+      "name": "Ian Holm",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Alien."
+    },
+    {
+      "id": "p-jamescameron",
+      "name": "James Cameron",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Terminator 2: Judgment Day."
+    },
+    {
+      "id": "p-arnoldschwarzenegger",
+      "name": "Arnold Schwarzenegger",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Terminator 2: Judgment Day."
+    },
+    {
+      "id": "p-lindahamilton",
+      "name": "Linda Hamilton",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Terminator 2: Judgment Day."
+    },
+    {
+      "id": "p-edwardfurlong",
+      "name": "Edward Furlong",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Terminator 2: Judgment Day."
+    },
+    {
+      "id": "p-robertpatrick",
+      "name": "Robert Patrick",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Terminator 2: Judgment Day."
+    },
+    {
+      "id": "p-stevenspielberg",
+      "name": "Steven Spielberg",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Jurassic Park."
+    },
+    {
+      "id": "p-samneill",
+      "name": "Sam Neill",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Jurassic Park."
+    },
+    {
+      "id": "p-lauradern",
+      "name": "Laura Dern",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Jurassic Park."
+    },
+    {
+      "id": "p-jeffgoldblum",
+      "name": "Jeff Goldblum",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Jurassic Park."
+    },
+    {
+      "id": "p-richardattenborough",
+      "name": "Richard Attenborough",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Jurassic Park."
+    },
+    {
+      "id": "p-georgelucas",
+      "name": "George Lucas",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Star Wars: A New Hope."
+    },
+    {
+      "id": "p-markhamill",
+      "name": "Mark Hamill",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Star Wars: A New Hope."
+    },
+    {
+      "id": "p-carriefisher",
+      "name": "Carrie Fisher",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Star Wars: A New Hope."
+    },
+    {
+      "id": "p-alecguinness",
+      "name": "Alec Guinness",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Star Wars: A New Hope."
+    },
+    {
+      "id": "p-peterjackson",
+      "name": "Peter Jackson",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Fellowship of the Ring."
+    },
+    {
+      "id": "p-elijahwood",
+      "name": "Elijah Wood",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Fellowship of the Ring."
+    },
+    {
+      "id": "p-ianmckellen",
+      "name": "Ian McKellen",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Fellowship of the Ring."
+    },
+    {
+      "id": "p-viggomortensen",
+      "name": "Viggo Mortensen",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Fellowship of the Ring."
+    },
+    {
+      "id": "p-orlandobloom",
+      "name": "Orlando Bloom",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Fellowship of the Ring."
+    },
+    {
+      "id": "p-russellcrowe",
+      "name": "Russell Crowe",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Gladiator."
+    },
+    {
+      "id": "p-joaquinphoenix",
+      "name": "Joaquin Phoenix",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Gladiator."
+    },
+    {
+      "id": "p-connienielsen",
+      "name": "Connie Nielsen",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Gladiator."
+    },
+    {
+      "id": "p-oliverreed",
+      "name": "Oliver Reed",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Gladiator."
+    },
+    {
+      "id": "p-marlonbrando",
+      "name": "Marlon Brando",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Godfather."
+    },
+    {
+      "id": "p-jamescaan",
+      "name": "James Caan",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Godfather."
+    },
+    {
+      "id": "p-frankdarabont",
+      "name": "Frank Darabont",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Shawshank Redemption."
+    },
+    {
+      "id": "p-timrobbins",
+      "name": "Tim Robbins",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Shawshank Redemption."
+    },
+    {
+      "id": "p-bobgunton",
+      "name": "Bob Gunton",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Shawshank Redemption."
+    },
+    {
+      "id": "p-williamsadler",
+      "name": "William Sadler",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Shawshank Redemption."
+    },
+    {
+      "id": "p-liamneeson",
+      "name": "Liam Neeson",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Schindler's List."
+    },
+    {
+      "id": "p-ralphfiennes",
+      "name": "Ralph Fiennes",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Schindler's List."
+    },
+    {
+      "id": "p-carolinegoodall",
+      "name": "Caroline Goodall",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Schindler's List."
+    },
+    {
+      "id": "p-sidneylumet",
+      "name": "Sidney Lumet",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of 12 Angry Men."
+    },
+    {
+      "id": "p-henryfonda",
+      "name": "Henry Fonda",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in 12 Angry Men."
+    },
+    {
+      "id": "p-leejcobb",
+      "name": "Lee J. Cobb",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in 12 Angry Men."
+    },
+    {
+      "id": "p-martinbalsam",
+      "name": "Martin Balsam",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in 12 Angry Men."
+    },
+    {
+      "id": "p-egmarshall",
+      "name": "E.G. Marshall",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in 12 Angry Men."
+    },
+    {
+      "id": "p-irvinkershner",
+      "name": "Irvin Kershner",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Empire Strikes Back."
+    },
+    {
+      "id": "p-davidprowse",
+      "name": "David Prowse",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Empire Strikes Back."
+    },
+    {
+      "id": "p-robertzemeckis",
+      "name": "Robert Zemeckis",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Forrest Gump."
+    },
+    {
+      "id": "p-tomhanks",
+      "name": "Tom Hanks",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Forrest Gump."
+    },
+    {
+      "id": "p-garysinise",
+      "name": "Gary Sinise",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Forrest Gump."
+    },
+    {
+      "id": "p-sallyfield",
+      "name": "Sally Field",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Forrest Gump."
+    },
+    {
+      "id": "p-jonathandemme",
+      "name": "Jonathan Demme",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Silence of the Lambs."
+    },
+    {
+      "id": "p-jodiefoster",
+      "name": "Jodie Foster",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Silence of the Lambs."
+    },
+    {
+      "id": "p-anthonyhopkins",
+      "name": "Anthony Hopkins",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Silence of the Lambs."
+    },
+    {
+      "id": "p-scottglenn",
+      "name": "Scott Glenn",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Silence of the Lambs."
+    },
+    {
+      "id": "p-tedlevine",
+      "name": "Ted Levine",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Silence of the Lambs."
+    },
+    {
+      "id": "p-edwardburns",
+      "name": "Edward Burns",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Saving Private Ryan."
+    },
+    {
+      "id": "p-fernandomeirelles",
+      "name": "Fernando Meirelles",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of City of God."
+    },
+    {
+      "id": "p-alexandrerodrigues",
+      "name": "Alexandre Rodrigues",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in City of God."
+    },
+    {
+      "id": "p-leandrofirmino",
+      "name": "Leandro Firmino",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in City of God."
+    },
+    {
+      "id": "p-phellipehaagensen",
+      "name": "Phellipe Haagensen",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in City of God."
+    },
+    {
+      "id": "p-emmastone",
+      "name": "Emma Stone",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in La La Land."
+    },
+    {
+      "id": "p-rosemariedewitt",
+      "name": "Rosemarie DeWitt",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in La La Land."
+    },
+    {
+      "id": "p-johnlegend",
+      "name": "John Legend",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in La La Land."
+    },
+    {
+      "id": "p-joshbrolin",
+      "name": "Josh Brolin",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Dune."
+    },
+    {
+      "id": "p-bobpersichetti",
+      "name": "Bob Persichetti",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Spider-Man: Into the Spider-Verse."
+    },
+    {
+      "id": "p-mahershalaali",
+      "name": "Mahershala Ali",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Spider-Man: Into the Spider-Verse."
+    },
+    {
+      "id": "p-joelcoen",
+      "name": "Joel Coen",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of No Country for Old Men."
+    },
+    {
+      "id": "p-tommyleejones",
+      "name": "Tommy Lee Jones",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in No Country for Old Men."
+    },
+    {
+      "id": "p-woodyharrelson",
+      "name": "Woody Harrelson",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in No Country for Old Men."
+    },
+    {
+      "id": "p-peterweir",
+      "name": "Peter Weir",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Truman Show."
+    },
+    {
+      "id": "p-jimcarrey",
+      "name": "Jim Carrey",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Truman Show."
+    },
+    {
+      "id": "p-lauralinney",
+      "name": "Laura Linney",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Truman Show."
+    },
+    {
+      "id": "p-edharris",
+      "name": "Ed Harris",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Truman Show."
+    },
+    {
+      "id": "p-noahemmerich",
+      "name": "Noah Emmerich",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Truman Show."
+    },
+    {
+      "id": "p-michelgondry",
+      "name": "Michel Gondry",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Eternal Sunshine of the Spotless Mind."
+    },
+    {
+      "id": "p-katewinslet",
+      "name": "Kate Winslet",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Eternal Sunshine of the Spotless Mind."
+    },
+    {
+      "id": "p-kirstendunst",
+      "name": "Kirsten Dunst",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Eternal Sunshine of the Spotless Mind."
+    },
+    {
+      "id": "p-wesanderson",
+      "name": "Wes Anderson",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of The Grand Budapest Hotel."
+    },
+    {
+      "id": "p-fmurrayabraham",
+      "name": "F. Murray Abraham",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Grand Budapest Hotel."
+    },
+    {
+      "id": "p-mathieuamalric",
+      "name": "Mathieu Amalric",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Grand Budapest Hotel."
+    },
+    {
+      "id": "p-adrienbrody",
+      "name": "Adrien Brody",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in The Grand Budapest Hotel."
+    },
+    {
+      "id": "p-spikejonze",
+      "name": "Spike Jonze",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Her."
+    },
+    {
+      "id": "p-rooneymara",
+      "name": "Rooney Mara",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Her."
+    },
+    {
+      "id": "p-christophwaltz",
+      "name": "Christoph Waltz",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Inglourious Basterds."
+    },
+    {
+      "id": "p-michaelfassbender",
+      "name": "Michael Fassbender",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Inglourious Basterds."
+    },
+    {
+      "id": "p-eliroth",
+      "name": "Eli Roth",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Inglourious Basterds."
+    },
+    {
+      "id": "p-jamiefoxx",
+      "name": "Jamie Foxx",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Django Unchained."
+    },
+    {
+      "id": "p-kerrywashington",
+      "name": "Kerry Washington",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Django Unchained."
+    },
+    {
+      "id": "p-georgemiller",
+      "name": "George Miller",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Mad Max: Fury Road."
+    },
+    {
+      "id": "p-charlizetheron",
+      "name": "Charlize Theron",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Mad Max: Fury Road."
+    },
+    {
+      "id": "p-nicholashoult",
+      "name": "Nicholas Hoult",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Mad Max: Fury Road."
+    },
+    {
+      "id": "p-hughkeaysbyrne",
+      "name": "Hugh Keays-Byrne",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Mad Max: Fury Road."
+    },
+    {
+      "id": "p-alexgarland",
+      "name": "Alex Garland",
+      "bornYear": 1970,
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop",
+      "primaryRole": "Director",
+      "bio": "Acclaimed auteur director of Ex Machina."
+    },
+    {
+      "id": "p-domhnallgleeson",
+      "name": "Domhnall Gleeson",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Ex Machina."
+    },
+    {
+      "id": "p-aliciavikander",
+      "name": "Alicia Vikander",
+      "bornYear": 1980,
+      "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop",
+      "primaryRole": "Actor",
+      "bio": "Acclaimed performing artist starring in Ex Machina."
+    }
+  ],
+  "movies": [
+    {
+      "id": "m-dune2",
+      "title": "Dune: Part Two",
+      "releaseYear": 2024,
+      "runtime": 166,
+      "imdbRating": 8.6,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/eZ239CUp1d6OryZEBPnO2n87gMG.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
+      "tagline": "Long live the fighters.",
+      "featured": true
+    },
+    {
+      "id": "m-oppenheimer",
+      "title": "Oppenheimer",
+      "releaseYear": 2023,
+      "runtime": 180,
+      "imdbRating": 8.9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/neeNHeXjMF5fXoCJRsOmkNGC7q.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+      "tagline": "The world forever changes.",
+      "featured": true
+    },
+    {
+      "id": "m-interstellar",
+      "title": "Interstellar",
+      "releaseYear": 2014,
+      "runtime": 169,
+      "imdbRating": 8.7,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/vgnoBSVzWAV9sNQUORaDGvDp7wx.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "When Earth becomes uninhabitable, a team of ex-NASA pilots travel through a wormhole across the galaxy to find a new home.",
+      "tagline": "Mankind was born on Earth. It was never meant to die here.",
+      "featured": true
+    },
+    {
+      "id": "m-inception",
+      "title": "Inception",
+      "releaseYear": 2010,
+      "runtime": 148,
+      "imdbRating": 8.8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into a CEO's mind.",
+      "tagline": "Your mind is the scene of the crime.",
+      "featured": true
+    },
+    {
+      "id": "m-darkknight",
+      "title": "The Dark Knight",
+      "releaseYear": 2008,
+      "runtime": 152,
+      "imdbRating": 9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/9FE5eD92WfVCiivM9Pq9GVSrlWk.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "When the menace known as the Joker wreaks havoc and chaos on Gotham, Batman must accept one of the greatest psychological tests.",
+      "tagline": "Welcome to a world without rules.",
+      "featured": true
+    },
+    {
+      "id": "m-bladerunner2049",
+      "title": "Blade Runner 2049",
+      "releaseYear": 2017,
+      "runtime": 164,
+      "imdbRating": 8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/gNdLJU9TxrpGx4dkZidjys3fyy0.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard.",
+      "tagline": "The key to the future is finally unearthed.",
+      "featured": true
+    },
+    {
+      "id": "m-eeaao",
+      "title": "Everything Everywhere All at Once",
+      "releaseYear": 2022,
+      "runtime": 139,
+      "imdbRating": 7.8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes.",
+      "tagline": "The universe is so much bigger than you realize.",
+      "featured": true
+    },
+    {
+      "id": "m-thematrix",
+      "title": "The Matrix",
+      "releaseYear": 1999,
+      "runtime": 136,
+      "imdbRating": 8.7,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "tagline": "Welcome to the Real World.",
+      "featured": true
+    },
+    {
+      "id": "m-theprestige",
+      "title": "The Prestige",
+      "releaseYear": 2006,
+      "runtime": 130,
+      "imdbRating": 8.5,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/z3br1ub7spqGMkxgjgJSdM4DC21.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "After a tragic accident, two stage magicians in 1890s London engage in a battle to create the ultimate illusion while sacrificing everything.",
+      "tagline": "Are you watching closely?",
+      "featured": true
+    },
+    {
+      "id": "m-thedeparted",
+      "title": "The Departed",
+      "releaseYear": 2006,
+      "runtime": 151,
+      "imdbRating": 8.5,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/6WRrGYalXXveItfpnipYdayFkQB.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+      "tagline": "Lies. Betrayal. Sacrifice. How far will you take it?",
+      "featured": true
+    },
+    {
+      "id": "m-godfather2",
+      "title": "The Godfather Part II",
+      "releaseYear": 1974,
+      "runtime": 202,
+      "imdbRating": 9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/sSuQTCZwqKrNBNIsksO9IAUoWP9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/kGzFbGhp99zva6oZODW5atUtnqi.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands the family syndicate.",
+      "tagline": "All the power on earth can't change destiny.",
+      "featured": true
+    },
+    {
+      "id": "m-pulpfiction",
+      "title": "Pulp Fiction",
+      "releaseYear": 1994,
+      "runtime": 154,
+      "imdbRating": 8.9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+      "tagline": "Just because you are a character doesn't mean that you have character.",
+      "featured": true
+    },
+    {
+      "id": "m-spiderverse2",
+      "title": "Spider-Man: Across the Spider-Verse",
+      "releaseYear": 2023,
+      "runtime": 140,
+      "imdbRating": 8.7,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/kVd3a9YeLGkoeR50jGEXM6EqseS.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence.",
+      "tagline": "It's how you wear the mask that matters.",
+      "featured": true
+    },
+    {
+      "id": "m-arrival",
+      "title": "Arrival",
+      "releaseYear": 2016,
+      "runtime": 116,
+      "imdbRating": 7.9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/pEzNVQfdzYDzVK0XqxERIw2x2se.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/8MUZz7oPXQftFTslZpRP3CVMOoq.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
+      "tagline": "Why are they here?",
+      "featured": true
+    },
+    {
+      "id": "m-parasite",
+      "title": "Parasite",
+      "releaseYear": 2019,
+      "runtime": 132,
+      "imdbRating": 8.5,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/vbC0rzdrb7Ohc2TkbEbxtOABECe.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+      "tagline": "Act like you own the place.",
+      "featured": true
+    },
+    {
+      "id": "m-whiplash",
+      "title": "Whiplash",
+      "releaseYear": 2014,
+      "runtime": 107,
+      "imdbRating": 8.5,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/wbQa0EnWUyRzQ5d1pHLNRlmsCUP.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing.",
+      "tagline": "The road to greatness can take you to the edge.",
+      "featured": true
+    },
+    {
+      "id": "m-fightclub",
+      "title": "Fight Club",
+      "releaseYear": 1999,
+      "runtime": 139,
+      "imdbRating": 8.8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+      "tagline": "Mischief. Mayhem. Soap.",
+      "featured": true
+    },
+    {
+      "id": "m-se7en",
+      "title": "Se7en",
+      "releaseYear": 1995,
+      "runtime": 127,
+      "imdbRating": 8.6,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/i5H7zusQGsysGQ8i6P361Vnr0n2.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+      "tagline": "Seven deadly sins. Seven ways to die.",
+      "featured": true
+    },
+    {
+      "id": "m-goodfellas",
+      "title": "Goodfellas",
+      "releaseYear": 1990,
+      "runtime": 145,
+      "imdbRating": 8.7,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife and his mob partners.",
+      "tagline": "Three decades of life in the mafia.",
+      "featured": true
+    },
+    {
+      "id": "m-pastlives",
+      "title": "Past Lives",
+      "releaseYear": 2023,
+      "runtime": 105,
+      "imdbRating": 7.9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/7HR38hMBl23lf38MAN63y4pKsHz.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Nora and Hae Sung, two deeply connected childhood friends, are wrested apart after Nora's family emigrates from South Korea.",
+      "tagline": "In-Yun: the destiny of souls meeting across lifetimes.",
+      "featured": true
+    },
+    {
+      "id": "m-spiritedaway",
+      "title": "Spirited Away",
+      "releaseYear": 2001,
+      "runtime": 125,
+      "imdbRating": 8.6,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/dyJvKsNs2KP8qQnAXbRwDjblViy.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits.",
+      "tagline": "The tunnel led Chihiro to a mysterious world.",
+      "featured": true
+    },
+    {
+      "id": "m-heat",
+      "title": "Heat",
+      "releaseYear": 1995,
+      "runtime": 170,
+      "imdbRating": 8.3,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/xKsnZDERG1dk95wuZ5q9iks3OL3.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A group of high-end professional thieves start to feel the LAPD on their tails when they unknowingly leave a clue at their latest heist.",
+      "tagline": "A Los Angeles crime saga.",
+      "featured": true
+    },
+    {
+      "id": "m-dunkirk",
+      "title": "Dunkirk",
+      "releaseYear": 2017,
+      "runtime": 106,
+      "imdbRating": 7.8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/b4Oe15CGLL61Ped0RAS9JpqdmCt.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/ddIkmH3TpR6XSc47jj0BrGK5Rbz.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Allied soldiers from Belgium, the British Commonwealth and Empire, and France are surrounded by the German Army and evacuated during World War II.",
+      "tagline": "When 400,000 men couldn't get home, home came for them.",
+      "featured": false
+    },
+    {
+      "id": "m-shutterisland",
+      "title": "Shutter Island",
+      "releaseYear": 2010,
+      "runtime": 138,
+      "imdbRating": 8.2,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/rbZvGN1A1QyZuoKzhCw8QPmf2q0.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.",
+      "tagline": "Someone is missing.",
+      "featured": false
+    },
+    {
+      "id": "m-alien",
+      "title": "Alien",
+      "releaseYear": 1979,
+      "runtime": 117,
+      "imdbRating": 8.5,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "The crew of a commercial spacecraft encounters a deadly lifeform after investigating a mysterious transmission of unknown origin.",
+      "tagline": "In space no one can hear you scream.",
+      "featured": false
+    },
+    {
+      "id": "m-terminator2",
+      "title": "Terminator 2: Judgment Day",
+      "releaseYear": 1991,
+      "runtime": 137,
+      "imdbRating": 8.6,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten-year-old son John from an even more advanced cyborg.",
+      "tagline": "It's nothing personal.",
+      "featured": false
+    },
+    {
+      "id": "m-jurassicpark",
+      "title": "Jurassic Park",
+      "releaseYear": 1993,
+      "runtime": 127,
+      "imdbRating": 8.2,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/63viWuPfYQjRYLSZSZNq7dglJP5.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/o7LzVmlOSYc3EspyVMC9bsTTARc.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A pragmatic paleontologist touring an almost complete theme park on an island in Central America is tasked with protecting kids when cloned dinosaurs run loose.",
+      "tagline": "An adventure 65 million years in the making.",
+      "featured": false
+    },
+    {
+      "id": "m-starwars4",
+      "title": "Star Wars: A New Hope",
+      "releaseYear": 1977,
+      "runtime": 121,
+      "imdbRating": 8.6,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/fai0rspsNeJCS69wHNjOdWxcI7P.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/yUiXA68FfQeA8cRBhd0Ao0jIRZt.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire.",
+      "tagline": "A long time ago in a galaxy far, far away...",
+      "featured": false
+    },
+    {
+      "id": "m-lordoftherings1",
+      "title": "The Fellowship of the Ring",
+      "releaseYear": 2001,
+      "runtime": 178,
+      "imdbRating": 8.9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/mWDdRXTivGE7aaY2vo1Ie0PfCX5.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring.",
+      "tagline": "One ring to rule them all.",
+      "featured": true
+    },
+    {
+      "id": "m-gladiator",
+      "title": "Gladiator",
+      "releaseYear": 2000,
+      "runtime": 155,
+      "imdbRating": 8.5,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/jhk6D8pim3yaByu1801kMoxXFaX.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+      "tagline": "What we do in life echoes in eternity.",
+      "featured": false
+    },
+    {
+      "id": "m-godfather",
+      "title": "The Godfather",
+      "releaseYear": 1972,
+      "runtime": 175,
+      "imdbRating": 9.2,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant youngest son.",
+      "tagline": "An offer you can't refuse.",
+      "featured": true
+    },
+    {
+      "id": "m-shawshank",
+      "title": "The Shawshank Redemption",
+      "releaseYear": 1994,
+      "runtime": 142,
+      "imdbRating": 9.3,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Over the course of several years, two convicts form a friendship, seeking solace and eventual redemption through basic compassion.",
+      "tagline": "Fear can hold you prisoner. Hope can set you free.",
+      "featured": true
+    },
+    {
+      "id": "m-schindler",
+      "title": "Schindler's List",
+      "releaseYear": 1993,
+      "runtime": 195,
+      "imdbRating": 9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "In German-occupied Poland during WWII, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution.",
+      "tagline": "Whoever saves one life, saves the world entire.",
+      "featured": true
+    },
+    {
+      "id": "m-12angrymen",
+      "title": "12 Angry Men",
+      "releaseYear": 1957,
+      "runtime": 96,
+      "imdbRating": 9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/ppd84D2i9W8jXmsyInGyihiSyqz.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty of murder.",
+      "tagline": "Life is in their hands. Death is on their minds.",
+      "featured": false
+    },
+    {
+      "id": "m-lotr3",
+      "title": "The Return of the King",
+      "releaseYear": 2003,
+      "runtime": 201,
+      "imdbRating": 9,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom.",
+      "tagline": "The eye of the enemy is moving.",
+      "featured": true
+    },
+    {
+      "id": "m-empirestrikesback",
+      "title": "The Empire Strikes Back",
+      "releaseYear": 1980,
+      "runtime": 124,
+      "imdbRating": 8.7,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/k9pshruhCpJAdH9RaGJO6jaWQ4X.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "After the Rebels are brutally overpowered by the Empire, Luke Skywalker begins Jedi training with Yoda while his friends are pursued by Darth Vader.",
+      "tagline": "The adventure continues...",
+      "featured": true
+    },
+    {
+      "id": "m-forrestgump",
+      "title": "Forrest Gump",
+      "releaseYear": 1994,
+      "runtime": 142,
+      "imdbRating": 8.8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "The history of the United States from the 1950s to the '70s unfolds through the perspective of an Alabama man with an IQ of 75.",
+      "tagline": "The world will never be the same once you've seen it through the eyes of Forrest Gump.",
+      "featured": true
+    },
+    {
+      "id": "m-silenceofthelambs",
+      "title": "The Silence of the Lambs",
+      "releaseYear": 1991,
+      "runtime": 118,
+      "imdbRating": 8.6,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/aYcnDyLMnpKce1FOYUpZrXtgUye.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",
+      "tagline": "To enter the mind of a killer you must challenge the mind of a madman.",
+      "featured": true
+    },
+    {
+      "id": "m-savingprivateryan",
+      "title": "Saving Private Ryan",
+      "releaseYear": 1998,
+      "runtime": 169,
+      "imdbRating": 8.6,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/bdD39MpSVhKjxarTxLSfX6baoMP.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+      "tagline": "The mission is a man.",
+      "featured": false
+    },
+    {
+      "id": "m-cityofgod",
+      "title": "City of God",
+      "releaseYear": 2002,
+      "runtime": 130,
+      "imdbRating": 8.6,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/k7eYdWvhYQyRQoU2TB2A2Xu2TfD.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "In the slums of Rio, two kids' paths diverge: one struggles to become a photographer, while the other becomes a ruthless kingpin.",
+      "tagline": "If you run away, the beast catches you; if you stay, the beast eats you.",
+      "featured": false
+    },
+    {
+      "id": "m-lalaland",
+      "title": "La La Land",
+      "releaseYear": 2016,
+      "runtime": 128,
+      "imdbRating": 8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/nlPCdZlHtRNcF6C9hzUH4ebmV1w.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations.",
+      "tagline": "Here's to the fools who dream.",
+      "featured": true
+    },
+    {
+      "id": "m-dune1",
+      "title": "Dune",
+      "releaseYear": 2021,
+      "runtime": 155,
+      "imdbRating": 8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/v1tRXZ4JtD2Iv6fjkPvT4GiwslV.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/h3HsfV8Kn9Sz2QWUYYdP5ya23hx.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir is troubled by visions of a dark future.",
+      "tagline": "It begins.",
+      "featured": false
+    },
+    {
+      "id": "m-spiderverse1",
+      "title": "Spider-Man: Into the Spider-Verse",
+      "releaseYear": 2018,
+      "runtime": 117,
+      "imdbRating": 8.4,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/8mnXR9rey5uQ08rZAvzojKWbDQS.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Teen Miles Morales becomes the Spider-Man of his universe and must join five spider-powered individuals from other dimensions to stop a threat.",
+      "tagline": "More than one can wear the mask.",
+      "featured": true
+    },
+    {
+      "id": "m-nocountry",
+      "title": "No Country for Old Men",
+      "releaseYear": 2007,
+      "runtime": 122,
+      "imdbRating": 8.2,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/6d5XOczc226jECq0LIX0siKtgHR.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/gddUsvfyySrM5k8B8wwJy2VRlBx.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars near the Rio Grande.",
+      "tagline": "There are no clean escapes.",
+      "featured": true
+    },
+    {
+      "id": "m-trumanshow",
+      "title": "The Truman Show",
+      "releaseYear": 1998,
+      "runtime": 103,
+      "imdbRating": 8.2,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "An insurance salesman discovers his whole life is actually a reality TV show broadcast live 24/7 across the globe.",
+      "tagline": "On the air. Unaware.",
+      "featured": true
+    },
+    {
+      "id": "m-eternalsunshine",
+      "title": "Eternal Sunshine of the Spotless Mind",
+      "releaseYear": 2004,
+      "runtime": 108,
+      "imdbRating": 8.3,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/W1ffLQGHoxfAOq0ZYdPtJlvAdb.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories.",
+      "tagline": "You can erase someone from your mind. Getting them out of your heart is another story.",
+      "featured": true
+    },
+    {
+      "id": "m-grandbudapest",
+      "title": "The Grand Budapest Hotel",
+      "releaseYear": 2014,
+      "runtime": 99,
+      "imdbRating": 8.1,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/9udCLTxTFl28RxnK8Q05E154ZGa.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A writer encounters the owner of a high-class European hotel who tells of his early years as a lobby boy in the hotel's glorious heyday.",
+      "tagline": "A film by Wes Anderson.",
+      "featured": false
+    },
+    {
+      "id": "m-her",
+      "title": "Her",
+      "releaseYear": 2013,
+      "runtime": 126,
+      "imdbRating": 8,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/1YnZchmaGc8dchgRPDpR1KGrixA.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
+      "tagline": "A Spike Jonze love story.",
+      "featured": false
+    },
+    {
+      "id": "m-inglourious",
+      "title": "Inglourious Basterds",
+      "releaseYear": 2009,
+      "runtime": 153,
+      "imdbRating": 8.3,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/aupnPtagH9JVBuMrGEanf4iqXEQ.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "In Nazi-occupied France during WWII, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plot.",
+      "tagline": "Once upon a time in Nazi-occupied France...",
+      "featured": true
+    },
+    {
+      "id": "m-django",
+      "title": "Django Unchained",
+      "releaseYear": 2012,
+      "runtime": 165,
+      "imdbRating": 8.5,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+      "tagline": "Life, liberty and the pursuit of vengeance.",
+      "featured": true
+    },
+    {
+      "id": "m-madmax",
+      "title": "Mad Max: Fury Road",
+      "releaseYear": 2015,
+      "runtime": 120,
+      "imdbRating": 8.1,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/ulcAi4dKpAjHwYGS08vNyx9H6I9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners and a drifter.",
+      "tagline": "What a lovely day.",
+      "featured": true
+    },
+    {
+      "id": "m-exmachina",
+      "title": "Ex Machina",
+      "releaseYear": 2014,
+      "runtime": 108,
+      "imdbRating": 7.7,
+      "posterUrl": "https://image.tmdb.org/t/p/w780/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/original/uqOuJ50EtTj7kkDIXP8LCg7G45D.jpg",
+      "budget": "$150 Million",
+      "boxOffice": "$500 Million",
+      "plotSummary": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.",
+      "tagline": "To erase the line between man and machine is to obscure the line between men and gods.",
+      "featured": false
+    }
+  ],
+  "users": [
+    {
+      "id": "u-scifilover",
+      "username": "AuraCinema",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&fit=crop",
+      "bio": "Sci-Fi & Mind-Bending devotee",
+      "favoriteGenre": "Science Fiction",
+      "tasteArchetype": "Mind-Bending"
+    },
+    {
+      "id": "u-cinephile",
+      "username": "NoirMaster",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&fit=crop",
+      "bio": "Crime & Classic Noir devotee",
+      "favoriteGenre": "Crime",
+      "tasteArchetype": "Crime Noir"
+    },
+    {
+      "id": "u-indiebuff",
+      "username": "A24Vibes",
+      "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&fit=crop",
+      "bio": "Indie & Multiverse devotee",
+      "favoriteGenre": "Drama",
+      "tasteArchetype": "Indie Surrealism"
+    }
+  ],
+  "relationships": {
+    "DIRECTED": [],
+    "ACTED_IN": [],
+    "IN_GENRE": [],
+    "HAS_TROPE": []
+  }
+}
