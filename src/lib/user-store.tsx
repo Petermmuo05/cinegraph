@@ -46,8 +46,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   const [selectedMood, setSelectedMood] = useState<string>("Mind-Bending");
   const [isTasteModalOpen, setIsTasteModalOpen] = useState(false);
 
-  // Helper to load state for a given user from localStorage
-  const loadUserState = (userId: string) => {
+  // Helper to load state for a given user from localStorage & backend CognoDB
+  const loadUserState = async (userId: string) => {
     if (userId === "guest") {
       setWatchlist([]);
       setLikedMovies([]);
@@ -56,6 +56,11 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
+    let loadedWatchlist: string[] = [];
+    let loadedLikes: string[] = [];
+    let loadedRatings: Record<string, number> = {};
+
+    // 1. Instant load from local storage cache if available
     try {
       const savedOnboarded = localStorage.getItem(`cinegraph_${userId}_onboarded`);
       const savedWatchlist = localStorage.getItem(`cinegraph_${userId}_watchlist`);
@@ -69,12 +74,42 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         setIsOnboarded(savedOnboarded !== "false");
       }
 
-      setWatchlist(savedWatchlist ? JSON.parse(savedWatchlist) : []);
-      setLikedMovies(savedLikes ? JSON.parse(savedLikes) : []);
-      setUserRatings(savedRatings ? JSON.parse(savedRatings) : {});
+      if (savedWatchlist) loadedWatchlist = JSON.parse(savedWatchlist);
+      if (savedLikes) loadedLikes = JSON.parse(savedLikes);
+      if (savedRatings) loadedRatings = JSON.parse(savedRatings);
       if (savedMood) setSelectedMood(savedMood);
+
+      setWatchlist(loadedWatchlist);
+      setLikedMovies(loadedLikes);
+      setUserRatings(loadedRatings);
     } catch (e) {
       // Ignore parse errors
+    }
+
+    // 2. Fetch server source of truth to sync across devices / fresh browsers
+    try {
+      const res = await fetch(`/api/user/sync?userId=${encodeURIComponent(userId)}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && !data.isMock) {
+          const serverWatchlist: string[] = data.watchlist || [];
+          const serverLikes: string[] = data.likedMovies || [];
+          const serverRatings: Record<string, number> = data.userRatings || {};
+
+          setWatchlist(serverWatchlist);
+          setLikedMovies(serverLikes);
+          setUserRatings(serverRatings);
+
+          // Update local cache to match server source of truth
+          try {
+            localStorage.setItem(`cinegraph_${userId}_watchlist`, JSON.stringify(serverWatchlist));
+            localStorage.setItem(`cinegraph_${userId}_likes`, JSON.stringify(serverLikes));
+            localStorage.setItem(`cinegraph_${userId}_ratings`, JSON.stringify(serverRatings));
+          } catch (e) {}
+        }
+      }
+    } catch (err) {
+      console.warn("Could not fetch remote user state:", err);
     }
   };
 
@@ -118,17 +153,17 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         if (data.authenticated && data.user) {
           setCurrentUser(data.user);
           setIsAuthenticated(true);
-          loadUserState(data.user.id);
+          await loadUserState(data.user.id);
         } else {
           setCurrentUser(guestUser);
           setIsAuthenticated(false);
-          loadUserState("guest");
+          await loadUserState("guest");
         }
       } catch (err) {
         console.warn("Session check fallback:", err);
         setCurrentUser(guestUser);
         setIsAuthenticated(false);
-        loadUserState("guest");
+        await loadUserState("guest");
       } finally {
         setAuthLoading(false);
       }
@@ -217,7 +252,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
 
       setCurrentUser(data.user);
       setIsAuthenticated(true);
-      loadUserState(data.user.id);
+      await loadUserState(data.user.id);
       return { success: true };
     } catch (err: any) {
       return { success: false, error: err.message || "Network error" };
@@ -230,7 +265,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     } catch (e) {}
     setCurrentUser(guestUser);
     setIsAuthenticated(false);
-    loadUserState("guest");
+    await loadUserState("guest");
   };
 
   return (
